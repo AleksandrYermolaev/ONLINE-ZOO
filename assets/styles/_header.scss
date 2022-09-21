@@ -1,0 +1,76 @@
+.header-desktop {
+	width: 100%;
+	height: 80px;
+	background: black;
+	position: relative;
+	z-index: 5;
+	
+	.header-container {
+		width: 100%;
+		height: 100%;
+		max-width: 1160px;
+		margin: 0 auto;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+
+		.title {
+			width: 7%;
+			height: 65%;
+			border: 1px solid #FFFFFF;
+			border-radius: 2px;
+			text-align: center;
+			display: flex;
+			align-items: center;
+			position: relative;
+
+			.title__text {
+				&::before {
+					content: '';
+					width: 16%;
+					height: 38.4%;
+					position: absolute;
+					top: 45%;
+					left: 13%;
+					display: block;
+					background: url('../../assets/icons/bamboo.png') no-repeat;
+				}
+				.text {
+					@include text-19-400;
+					color: #FFFFFF;
+					line-height: 120%;
+					transition: 0.5s ease;
+
+					&:hover {
+						color: $color-orange;
+					}
+				}
+			}
+			
+		}
+
+		.menu {
+			flex: 0 1 73%;
+					
+			.menu__list {
+				display: flex;
+				gap: 6.8%;
+
+				.text {
+					@include text-16-500;
+					color: #FFFFFF;
+					line-height: 140%;
+					transition: 0.5s ease;
+
+					&:hover {
+						color: $color-orange;
+					}
+				}
+			}
+		}
+		.design {
+			@include text-16-500;
+			color: #FFFFFF;
+		}
+	}
+}
