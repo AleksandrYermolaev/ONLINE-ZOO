@@ -45,14 +45,14 @@
 				&::before {
 					content: '';
 					display: block;
-					width: 89%;
+					width: 93%;
 					height: 116.25%;
 					border-radius: 50%;
 					background: $gradient-orange;
 					position: absolute;
 					z-index: -1;
 					top: -18%;
-					left: -9%
+					left: -15%
 				}
 			}
 
@@ -82,13 +82,13 @@
 
 .backstage {
 	width: 100%;
-	padding-top: 70px;
+	padding-top: 60px;
 	position: relative;
 	
 	
 	.flower {
 		position: absolute;
-		top: -12%;
+		top: -13%;
 		right: 0;
 		z-index: -1;
 		width: 12.5%;
@@ -207,7 +207,7 @@
 	}
 	.button {
 		@include btn-orange;
-		margin: 5% auto;
+		margin: 5% auto 6%;
 		&::after {
 			content: 'choose your favorite';
 			@include text-16-500;
@@ -269,7 +269,7 @@
 			font-weight: 500;
 			line-height: 120%;
 			color: $text-color;
-			margin-top: 2.58%;
+			margin-top: 2.7%;
 			padding-left: 8.6%;
 		}
 		.text-bold {
@@ -371,7 +371,7 @@
 			color: $text-color;
 		}
 		.cards {
-			margin: 4.05% 0 1.724% 0;
+			margin: 4.3% 0 1.724% 0;
 			width: 100%;
 			display: flex;
 			gap: 30px;
@@ -381,7 +381,7 @@
 			}
 		}
 		.scroll {
-			width: 800px;
+			width: 600px;
 			height: 8px;
 			background: $color-lightgray;
 			position: relative;
@@ -413,9 +413,6 @@
 					background: $color-orange;
 					border-radius: 5px;
 					transition: $trans-set;
-					&:hover {
-						transform: scale(1.2);
-					}
 				}
 			}
 		}
@@ -582,7 +579,7 @@
 			}
 			.menu {
 				align-self: flex-end;
-				padding: 0 0 12px 5%;
+				padding: 0 0 15px 10%;
 				.menu__list {
 					display: flex;
 					gap: 58px;
@@ -593,6 +590,9 @@
 						line-height: 140%;
 						transition: $trans-set;
 						&:hover {
+							color: $color-orange;
+						}
+						&.active {
 							color: $color-orange;
 						}
 					}

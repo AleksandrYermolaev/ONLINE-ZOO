@@ -33,7 +33,11 @@
 					&:hover {
 						color: $color-orange;
 					}
+					&.active {
+						color: $color-orange; 
+					}
 				}
+				
 			}
 		}
 		.design {
@@ -48,3 +52,4 @@
 		}
 	}
 }
+

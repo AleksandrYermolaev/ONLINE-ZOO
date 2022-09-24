@@ -465,6 +465,9 @@ h1, h2, h3, h4, h5, h6 {
 .header-desktop .header-container .menu .menu__list .text:hover {
   color: #FE9013;
 }
+.header-desktop .header-container .menu .menu__list .text.active {
+  color: #FE9013;
+}
 .header-desktop .header-container .design .text {
   font-family: Roboto, sans-serif;
   font-style: normal;
@@ -525,14 +528,14 @@ h1, h2, h3, h4, h5, h6 {
 .top .container .sub-container .headline::before {
   content: "";
   display: block;
-  width: 89%;
+  width: 93%;
   height: 116.25%;
   border-radius: 50%;
   background: linear-gradient(113.96deg, #F9804B 1.49%, #FE9013 101.44%);
   position: absolute;
   z-index: -1;
   top: -18%;
-  left: -9%;
+  left: -15%;
 }
 .top .container .sub-container .btn-orange {
   position: relative;
@@ -578,12 +581,12 @@ h1, h2, h3, h4, h5, h6 {
 
 .backstage {
   width: 100%;
-  padding-top: 70px;
+  padding-top: 60px;
   position: relative;
 }
 .backstage .flower {
   position: absolute;
-  top: -12%;
+  top: -13%;
   right: 0;
   z-index: -1;
   width: 12.5%;
@@ -713,7 +716,7 @@ h1, h2, h3, h4, h5, h6 {
   text-align: center;
   text-transform: uppercase;
   transition: 0.5s ease;
-  margin: 5% auto;
+  margin: 5% auto 6%;
 }
 .pets .button:hover::after {
   opacity: 1;
@@ -789,7 +792,7 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: 500;
   line-height: 120%;
   color: #333B41;
-  margin-top: 2.58%;
+  margin-top: 2.7%;
   padding-left: 8.6%;
 }
 .friend .container .text-bold {
@@ -917,13 +920,13 @@ h1, h2, h3, h4, h5, h6 {
   color: #333B41;
 }
 .testimonials .container .cards {
-  margin: 4.05% 0 1.724% 0;
+  margin: 4.3% 0 1.724% 0;
   width: 100%;
   display: flex;
   gap: 30px;
 }
 .testimonials .container .scroll {
-  width: 800px;
+  width: 600px;
   height: 8px;
   background: #F1F3F2;
   position: relative;
@@ -961,9 +964,6 @@ h1, h2, h3, h4, h5, h6 {
   border-radius: 5px;
   -webkit-transition: 0.5s ease;
   transition: 0.5s ease;
-}
-.testimonials .container .scroll input::-webkit-slider-thumb:hover {
-  transform: scale(1.2);
 }
 .testimonials .container .button {
   align-self: start;
@@ -1165,7 +1165,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 .footer .container .row3 .menu {
   align-self: flex-end;
-  padding: 0 0 12px 5%;
+  padding: 0 0 15px 10%;
 }
 .footer .container .row3 .menu .menu__list {
   display: flex;
@@ -1181,6 +1181,9 @@ h1, h2, h3, h4, h5, h6 {
   transition: 0.5s ease;
 }
 .footer .container .row3 .menu .menu__list .text:hover {
+  color: #FE9013;
+}
+.footer .container .row3 .menu .menu__list .text.active {
   color: #FE9013;
 }
 .footer .container .row3 .about {
