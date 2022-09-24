@@ -1,8 +1,18 @@
 $font-roboto: Roboto, sans-serif;
 $color-orange: #F9804B;
 $gradient-orange: linear-gradient(113.96deg, #F9804B 1.49%, #FE9013 101.44%);
+$gradient-pink: linear-gradient(315.75deg, rgba(254, 189, 171, 0.74) 30.06%, rgba(243, 169, 248, 0.66) 50.74%, #E0D8F0 80.49%, #EAF7FE 127.9%, #EAF7FE 149.54%), linear-gradient(315.75deg, rgba(254, 189, 171, 0.74) 30.06%, rgba(243, 169, 248, 0.66) 50.74%, #E0D8F0 80.49%, #EAF7FE 127.9%, #EAF7FE 149.54%);
+$background-pink: linear-gradient(315.75deg, rgba(254, 210, 144, 0.7) 30.06%, #FEBDAB 100.95%, rgba(254, 210, 144, 0.7) 106.36%), linear-gradient(315.75deg, rgba(254, 189, 171, 0.74) 30.06%, rgba(243, 169, 248, 0.66) 50.74%, #E0D8F0 80.49%, #EAF7FE 127.9%, #EAF7FE 149.54%), linear-gradient(315.75deg, rgba(254, 189, 171, 0.74) 30.06%, rgba(243, 169, 248, 0.66) 50.74%, #E0D8F0 80.49%, #EAF7FE 127.9%, #EAF7FE 149.54%);
+$btn-orange: linear-gradient(#F9804B, #F9804B);
+$btn-green: linear-gradient(#4B9200, #4B9200);
 $color-yellow: #FFEE2E;
+$color-orange: #FE9013;
 $color-green: #4B9200;
+$color-gray: #3f3f3f;
+$color-lightgray: #F1F3F2;
+$text-color: #333B41;
+$footer-color: #111115;
+$trans-set: 0.5s ease;
 
 @mixin text-16-500 {
 	font: {
@@ -22,7 +32,18 @@ $color-green: #4B9200;
 	}
 }
 
+@mixin text-15-300 {
+	font: {
+		family: $font-roboto;
+		style: normal;
+		weight: 300;
+		size: 15px;
+	}
+	line-height: 120%;
+}
+
 @mixin btn-orange {
+	position: relative;
 	display: block;
 	width: 300px;
 	height: 55px;
@@ -32,13 +53,234 @@ $color-green: #4B9200;
 	@include text-16-500;
 	text-align: center;
 	text-transform: uppercase;
-	cursor: pointer;
-	transition: 0.5s ease;
+	transition: $trans-set;
+
+	
 
 	&:hover {
-		background: $color-orange;
+		&::after {
+			opacity: 1;
+		}
 	}
 	&:active {
-		background: $color-green;
+		&::after {
+			background: $btn-green;
+		}
+	}
+}
+@mixin arrow {
+	position: absolute;
+	top: 46.5%;
+	cursor: pointer;
+	transition: $trans-set;
+	&:hover {
+		transform: scale(1.1);
+	}
+}
+
+%logo {
+	width: 7%;
+	height: 65%;
+	border: 1px solid #FFFFFF;
+	border-radius: 2px;
+	text-align: center;
+	display: flex;
+	align-items: center;
+	position: relative;
+
+	.title__text {
+		&::before {
+			content: '';
+			width: 16%;
+			height: 38.4%;
+			position: absolute;
+			top: 45%;
+			left: 13%;
+			display: block;
+			background: url('../../assets/icons/bamboo.png') no-repeat;
+		}
+		.text {
+			@include text-19-400;
+			color: #FFFFFF;
+			line-height: 120%;
+			transition: $trans-set;
+
+			&:hover {
+				color: $color-orange;
+			}
+		}
+	}
+}
+
+%petscard {
+	display: flex;
+	flex-direction: column;
+	position: relative;
+	&:hover {
+		img {
+			transform: scale(1.05464);
+		}
+		.desc {
+			top: -600%;
+			color: #FFFFFF;
+		}
+		
+		.gradient:after {
+			transform: scale(1.05464);
+			opacity: 0.7;
+		}
+	}
+	&::after {
+		content: '';
+		position: absolute;
+		top: 0;
+		right: 0;
+		left: 0;
+		bottom: 0;
+		z-index: -1;
+		margin: -1px -2px -2px -2px;
+		background: $gradient-orange;
+		border-radius: 5px;
+	}
+	.gradient {
+		display: inline-block;
+		position: relative;    
+	}
+	.gradient:after {
+		content: "";
+		display: block;    
+		width: 100%;
+		height: 100%;    
+		position: absolute;
+		top: 0;      
+		left: 0;   
+		background: $color-gray;
+		opacity: 0;
+		transition: $trans-set;
+	}
+	img {
+		transition: $trans-set;
+	}
+	.background {
+		width: 100%;
+		height: 60px;
+		background-color: #FFFFFF;
+		transition: $trans-set;
+	}
+	.desc {
+		padding: 8px 0 0 16px;
+		display: grid;
+		grid-template-columns: 1fr 57px;
+		grid-template-rows: 1fr 1fr;
+		position: relative;
+		top: 0;
+		transition: $trans-set;
+		
+
+		.desc__header {
+			@include text-16-500;
+			font-weight: 700;
+			line-height: 140%;
+			grid-row: 1/2;
+			grid-column: 1/2;
+		}
+		.desc__icon {
+			grid-row: 1/3;
+			grid-column: 2/3;
+			align-self: center;
+		}
+		.desc__text {
+			@include text-16-500;
+			font-size: 15px;
+			font-weight: 300;
+			line-height: 120%;
+			grid-row: 2/3;
+			grid-column: 1/2;
+		}
+	}
+}
+
+%paycards {
+	background: $gradient-orange;
+	border-radius: 5px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	.contain {
+		background-color: #FFFFFF;
+		width: 98%;
+		height: 98%;
+		border-radius: 5px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+}
+
+%testimonialscards {
+	position: relative;
+	width: 268px;
+	height: 391px;
+	padding: 15px 15px 21px 15px;
+	background: $color-lightgray;
+	border-radius: 20px;
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+
+	&::before {
+		content: '';
+		position: absolute;
+		z-index: -1;
+		top: -2px;
+		left: -2px;
+		right: -2px;
+		bottom: -2px;
+		border-radius: 20px;
+		background: $gradient-pink;
+	}
+	.card__block-head {
+		display: flex;
+		gap: 10px;
+		flex-wrap: wrap;
+		height: 37px;
+		.name {
+			@include text-16-500;
+			line-height: 19.2px;
+			color: black;
+			.location {
+				@include text-15-300;
+				color: #BDBDBD;
+			}
+		}
+	}
+	.card__block-body {
+		overflow: hidden;
+		.text {
+			@include text-15-300;
+			color: #767474;
+		}
+	}
+}
+
+%social {
+	@include text-16-500;
+	line-height: 140%;
+	color: #FFFFFF;
+	transition: $trans-set;
+	position: relative;
+	&::before {
+		content: '';
+		display: block;
+		position: absolute;
+		left: -38px;
+		top: -4px;
+		width: 26px;
+		height: 26px;
+		border-radius: 50%;
+		transition: $trans-set;
+	}
+	&:hover {
+		color: $color-green;
 	}
 }

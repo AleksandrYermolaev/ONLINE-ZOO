@@ -1,22 +1,15 @@
 .top {
 	width: 100%;
 	height: 780px;
-	background: url('../../assets/images/GiantPanda.jpg') 100% /cover no-repeat;
 	position: relative;
 	top: -80px;
+	overflow: hidden;
 
-	&::before {
-		content: '';
-		display: block;
-		width: 465px;
-		height: 465px;
-		border-radius: 50%;
-		background: $gradient-orange;
+	.image__panda {
 		position: absolute;
 		z-index: 1;
-		top: 11.8%;
-		right: 328px;
-		
+		width: 100%;
+		min-width: 1600px;
 	}
 
 	.container {
@@ -27,14 +20,12 @@
 		justify-content: flex-end;
 		position: relative;
 
-	
-
 		.sub-container {
 			flex: 0 1 43.1%;
 			display: flex;
 			flex-direction: column;
 			align-items: center;
-
+			
 			.headline {
 				margin: 166px 0 60px 0;
 				@include text-19-400;
@@ -50,13 +41,575 @@
 				.text-orange {
 					color: $color-yellow;
 				}
+
+				&::before {
+					content: '';
+					display: block;
+					width: 89%;
+					height: 116.25%;
+					border-radius: 50%;
+					background: $gradient-orange;
+					position: absolute;
+					z-index: -1;
+					top: -18%;
+					left: -9%
+				}
 			}
 
 			.btn-orange {
 				@include btn-orange;
-				position: relative;
+				z-index: 2;
+				&::after {
+					content: 'watch online';
+					@include text-16-500;
+					line-height: 56px;
+					border-radius: 25px;
+					display: block;
+					position: absolute;
+					width: 100%;
+					height: 100%;
+					top: 0;
+					left: 0;
+					background: $btn-orange;
+					opacity: 0;
+					transition: $trans-set;
+				}
 			}
 		}
 
+	}
+}
+
+.backstage {
+	width: 100%;
+	padding-top: 70px;
+	position: relative;
+	
+	
+	.flower {
+		position: absolute;
+		top: -12%;
+		right: 0;
+		z-index: -1;
+		width: 12.5%;
+	}
+
+	.container {
+		width: 100%;
+		max-width: 1160px;
+		margin: 0 auto;
+		display: flex;
+		gap: 7.4%;
+		
+		.block-image {
+			flex: 0 1 52.5%;
+
+			.image__ded {
+				width: 100%;
+			}
+		}
+
+		.block-text {
+			flex: 0 1 40%;
+			display: flex;
+			flex-direction: column;
+			color: $text-color;
+			
+			.header {
+				@include text-19-400;
+				font-size: 48px;
+				line-height: 57.6px;
+				margin: 0 0 20px 0;
+			}
+
+			.text {
+				@include text-16-500;
+				font-weight: 400;
+				line-height: 20.8px;
+			}
+
+			.sub-header {
+				@include text-19-400;
+				font-size: 24px;
+				line-height: 28.8px;
+				margin: 54px 0 34px 0;
+			}
+
+			& :last-child {
+				line-height: 22.4px;
+			}
+		}
+	}
+}
+
+.pets {
+	width: 100%;
+	margin-top: 11.25%;
+
+	.container {
+		width: 100%;
+		max-width: 1160px;
+		margin: 0 auto;
+		position: relative;
+
+		.arrow-left {
+			@include arrow;
+			left: -7%;
+			&::after {
+				content: '';
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+				background: url('../../assets/icons/button-left-active.png');
+				opacity: 0;
+			}
+			&:active {
+				&::after {
+					opacity: 1;
+				}
+			}
+		}
+		.arrow-right {
+			@include arrow;
+			right: -7%;
+			&::after {
+				content: '';
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+				background: url('../../assets/icons/button-right-active.png');
+				opacity: 0;
+			}
+			&:active {
+				&::after {
+					opacity: 1;
+				}
+			}
+		}
+		.all-pets {
+			display: grid;
+			grid-template: 1fr 1fr / 1fr 1fr 1fr;
+			gap: 20px 30px;
+			.pets__panda,
+			.pets__eagles,
+			.pets__gorilla,
+			.pets__sloth,
+			.pets__cheetas,
+			.pets__penguins {
+				@extend %petscard;
+			}
+		}
+		
+	}
+	.button {
+		@include btn-orange;
+		margin: 5% auto;
+		&::after {
+			content: 'choose your favorite';
+			@include text-16-500;
+			line-height: 57px;
+			border-radius: 25px;
+			display: block;
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			top: 0;
+			left: 0;
+			background: $btn-orange;
+			opacity: 0;
+			transition: $trans-set;
+		}
+	}
+}
+
+.friend {
+	width: 100%;
+	background: $background-pink;
+	padding: 4.3% 0 6.25% 0;
+	position: relative;
+
+	.flower-palm {
+		position: absolute;
+		left: 0;
+		bottom: 100%;
+		width: 18.25%;
+	}
+	.flower-strel {
+		position: absolute;
+		right: 0;
+		bottom: 100%;
+		width: 23%;
+	}
+	.container {
+		width: 100%;
+		max-width: 1160px;
+		margin: 0 auto;
+		display: flex;
+		flex-direction: column;
+		background: rgba(253, 253, 255, 0.52);
+		border-radius: 20px;
+		backdrop-filter: blur(2px);
+		
+
+		.header {
+			align-self: center;
+			@include text-19-400;
+			font-size: 48px;
+			line-height: 120%;
+			color: $color-orange;
+			margin-top: 3.5%;
+		}
+		.sub-header {
+			@include text-19-400;
+			font-size: 24px;
+			font-weight: 500;
+			line-height: 120%;
+			color: $text-color;
+			margin-top: 2.58%;
+			padding-left: 8.6%;
+		}
+		.text-bold {
+			@include text-16-500;
+			font-size: 16px;
+			line-height: 130%;
+			color: $text-color;
+			margin-top: 3.44%;
+			padding-left: 8.6%;
+		}
+		.text {
+			@include text-19-400;
+			font-size: 16px;
+			line-height: 130%;
+			color: $text-color;
+			padding-left: 8.6%;
+			margin-top: 0.9%;
+			width: 100%;
+			max-width: 980px;
+			.link {
+				color: $text-color;
+				border-bottom: 1px solid $color-orange;
+			}
+		}
+		h3.sub-header {
+			font-size: 36px;
+			line-height: 130%;
+			padding: 0;
+			align-self: center;
+			margin-top: 5%;
+		}
+		.payment {
+			display: grid;
+			grid-template: 168px 46px / 168px 69px 168px 69px 168px;
+			margin: 3.44% auto 0 auto;
+			gap: 30px;
+			width: 65.68%;
+			.card1,
+			.card2,
+			.card3 {
+				@extend %paycards;
+			}
+			.arrow {
+				align-self: center;
+			}
+			.text {
+				@include text-16-500;
+				font-weight: 400;
+				line-height: 140%;
+				color: $text-color;
+				padding: 0;
+			}
+			.text2 {
+				grid-column: 3/4;
+			}
+			.text3 {
+				grid-column: 5/6;
+			}
+		}
+		.button {
+			@include btn-orange;
+			margin: 5.17% auto;
+				
+			&::after {
+				content: 'feed a friend now';
+				@include text-16-500;
+				line-height: 57px;
+				border-radius: 25px;
+				display: block;
+				position: absolute;
+				width: 100%;
+				height: 100%;
+				top: 0;
+				left: 0;
+				background: $btn-orange;
+				opacity: 0;
+				transition: $trans-set;
+			}
+		}
+	}
+}
+
+.testimonials {
+	width: 100%;
+	margin-top: 8.75%;
+
+	.container {
+		width: 100%;
+		max-width: 1160px;
+		margin: 0 auto;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	
+		.header {
+			@include text-19-400;
+			font-size: 36px;
+			line-height: 130%;
+			color: $text-color;
+		}
+		.cards {
+			margin: 4.05% 0 1.724% 0;
+			width: 100%;
+			display: flex;
+			gap: 30px;
+			
+			.card__block {
+			@extend %testimonialscards;
+			}
+		}
+		.scroll {
+			width: 800px;
+			height: 8px;
+			background: $color-lightgray;
+			position: relative;
+			border-radius: 5px;
+			&::before {
+				content: '';
+				position: absolute;
+				z-index: -1;
+				top: -2px;
+				left: -2px;
+				right: -2px;
+				bottom: -2px;
+				border-radius: 5px;
+				background: $gradient-pink;
+			}
+			input {
+				position: absolute;
+				top: 0;
+				left: 0;
+				appearance: none;
+				width: 100%;
+				border-radius: 5px;
+				cursor: pointer;
+				&::-webkit-slider-thumb {
+					margin: 1px 0;
+					appearance: none;
+					width: 116px;
+					height: 6px;
+					background: $color-orange;
+					border-radius: 5px;
+					transition: $trans-set;
+					&:hover {
+						transform: scale(1.2);
+					}
+				}
+			}
+		}
+		.button {
+			align-self: start;
+			@include btn-orange;
+			margin-top: 2.67%;
+			border-radius: 5px;
+			&::after {
+				content: 'leave feedback';
+				@include text-16-500;
+				line-height: 57px;
+				border-radius: 5px;
+				display: block;
+				position: absolute;
+				width: 100%;
+				height: 100%;
+				top: 0;
+				left: 0;
+				background: $btn-orange;
+				opacity: 0;
+				transition: $trans-set;
+			}
+		}
+	}
+}
+
+.footer	{
+	width: 100%;
+	margin-top: 11.25%;
+	background: $footer-color;
+	position: relative;
+	.container {
+		width: 100%;
+		max-width: 1160px;
+		margin: 0 auto;
+		display: flex;
+		flex-direction: column;
+		padding: 40px 0 50px;
+		.row1 {
+			display: flex;
+			justify-content: space-between;
+			.title {
+				@extend %logo;
+			}
+			.subscribe {
+				width: 32%;
+				p {
+					@include text-19-400;
+					font-weight: 300;
+					font-size: 24px;
+					line-height: 28.8px;
+					color: #FFFFFF;
+					margin-bottom: 14px;
+				}
+				.email {
+					width: 61%;
+					@include text-19-400;
+					font-size: 16px;
+					line-height: 140%;
+					padding: 10px;
+					background: transparent;
+					border: 1px solid $color-orange;
+					border-radius: 2px;
+					color: #BDBDBD;
+					transition: $trans-set;
+					&::placeholder {
+						color: #BDBDBD;
+					}
+					&:focus {
+						border: 1px solid $color-green;
+					}
+				}
+				.submit {
+					margin-left: 10px;
+					width: 130px;
+					@include text-16-500;
+					line-height: 42px;
+					color: black;
+					border: 1px solid #333B41;
+					border-radius: 5px;
+					&:disabled {
+						cursor: auto;
+						background: $color-lightgray;
+					}
+				}
+			}
+		}
+		.row2 {
+			margin-top: 3.1%;
+			.button {
+				@include btn-orange;
+				border-radius: 5px;
+				&::after {
+					content: 'donate for volunteers';
+					@include text-16-500;
+					line-height: 57px;
+					border-radius: 5px;
+					display: block;
+					position: absolute;
+					width: 100%;
+					height: 100%;
+					top: 0;
+					left: 0;
+					background: $btn-orange;
+					opacity: 0;
+					transition: $trans-set;
+				}
+			}
+		}
+		.row3 {
+			margin-top: 3.79%;
+			display: flex;
+			justify-content: space-between;
+			.social__list {
+				padding-left: 38px;
+				.social__item {
+					margin-bottom: 14px;
+					&:nth-child(1) .social__link{
+						@extend %social;
+						&::before {
+							background: rgba(196, 196, 196, 0.5) url('../../assets/icons/facebook.png') no-repeat center;
+						}
+						&:hover {
+							&::before {
+								background: $color-green url('../../assets/icons/facebook.png') no-repeat center;
+							}
+						}
+					}
+					&:nth-child(2) .social__link{
+						@extend %social;
+						&::before {
+							background: rgba(196, 196, 196, 0.5) url('../../assets/icons/twitter.png') no-repeat center;
+						}
+						&:hover {
+							&::before {
+								background: $color-green url('../../assets/icons/twitter.png') no-repeat center;
+							}
+						}
+					}
+					&:nth-child(3) .social__link{
+						@extend %social;
+						&::before {
+							background: rgba(196, 196, 196, 0.5) url('../../assets/icons/instagram.png') no-repeat center;
+						}
+						&:hover {
+							&::before {
+								background: $color-green url('../../assets/icons/instagram.png') no-repeat center;
+							}
+						}
+					}
+					&:nth-child(4) .social__link{
+						@extend %social;
+						&::before {
+							background: rgba(196, 196, 196, 0.5) url('../../assets/icons/youtube.png') no-repeat center;
+						}
+						&:hover {
+							&::before {
+								background: $color-green url('../../assets/icons/youtube.png') no-repeat center;
+							}
+						}
+					}
+				}
+			}
+			.menu {
+				align-self: flex-end;
+				padding: 0 0 12px 5%;
+				.menu__list {
+					display: flex;
+					gap: 58px;
+					
+					.text {
+						@include text-16-500;
+						color: #FFFFFF;
+						line-height: 140%;
+						transition: $trans-set;
+						&:hover {
+							color: $color-orange;
+						}
+					}
+				}
+			}
+			.about {
+				align-self: flex-end;
+				padding: 0 0 12px 0;
+				font-family: $font-roboto;
+				font-weight: 100;
+				font-size: 16px;
+				line-height: 130%;
+				color: rgba(255, 255, 255, 0.8);
+				& :first-child {
+					margin-bottom: 10px;
+				}
+			}
+		}
 	}
 }
