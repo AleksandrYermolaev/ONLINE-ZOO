@@ -62,7 +62,7 @@
 						<div class="dot"></div>
 						<div class="dot"></div>
 						<div class="dot"></div>
-						<input type="range" class="pointer" min="1" max="8" step="1" value="3">
+						<input type="range" class="pointer" min="0" max="7" step="1" value="2">
 					</div>
 					<div class="money">
 						<div class="sum"><span>$</span>5000</div>
@@ -82,13 +82,56 @@
 				<div class="radios">
 					<input type="radio" name="period" id="monthly" class="period">
 					<label for="monthly" class="label">Monthly</label>
-					<input type="radio" name="period" id="once" class="period">
-					<label for="once" class="label">Once</label>
+					<input type="radio" name="period" id="once" class="period" checked>
+					<label for="once" class="label checked">Once</label>
 				</div>
 				<button class="button">Feed a friend now</button>
-				<p class="text">Share with your friends on social networks</p>
+				<p class="text-last">Share with your friends on social networks</p>
 			</section>
 		</div>
 	</main>
+
+	<footer class="footer">
+		<div class="container">
+			<div class="row1">
+				<div class="title">
+					<div class="title__text"><a href="https://aleksandryermolaev.github.io/ONLINE-ZOO/pages/main/" class="text">PetStory online</a></div>
+				</div>
+				<div class="subscribe">
+					<p>Subscribe to our news</p>
+					<input type="email" class="email" placeholder="Enter your email" required>
+					<button class="submit" disabled>Submit</button>
+				</div>
+			</div>
+			<div class="row2">
+				<button class="button button-donate">
+					donate for volunteers
+				</button>
+			</div>
+			<div class="row3">
+				<div class="social">
+					<ul class="social__list">
+						<li class="social__item"><a href="https://www.facebook.com/" class="social__link" target="_blank">Facebook</a></li>
+						<li class="social__item"><a href="https://twitter.com/" class="social__link" target="_blank">Twitter</a></li>
+						<li class="social__item"><a href="https://www.instagram.com/" class="social__link" target="_blank">Instagram</a></li>
+						<li class="social__item"><a href="https://www.youtube.com/" class="social__link" target="_blank">Youtube</a></li>
+					</ul>
+				</div>
+				<nav class="menu">
+					<ul class="menu__list">
+						<li class="menu__item"><a href="https://aleksandryermolaev.github.io/ONLINE-ZOO/pages/main/" class="text">About</a></li>
+						<li class="menu__item"><a href="" class="text">Map</a></li>
+						<li class="menu__item"><a href="" class="text">Zoos</a></li>
+						<li class="menu__item"><a href="" class="text">Contact us</a></li>
+					</ul>
+				</nav>
+				<div class="about">
+					<p class="text">Designed by Alisa Samborskaya</p>
+					<p class="text">©RSSchool & ©Yem Digital 2021</p>
+				</div>
+			</div>
+		</div>
+	</footer>
+	<script src="script.js"></script>
 </body>
 </html>
