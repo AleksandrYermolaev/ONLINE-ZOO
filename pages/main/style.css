@@ -566,7 +566,7 @@ h1, h2, h3, h4, h5, h6 {
   font-style: normal;
   font-weight: 500;
   font-size: 16px;
-  line-height: 56px;
+  line-height: 55px;
   border-radius: 25px;
   display: block;
   position: absolute;
@@ -996,7 +996,7 @@ h1, h2, h3, h4, h5, h6 {
   font-style: normal;
   font-weight: 500;
   font-size: 16px;
-  line-height: 57px;
+  line-height: 55px;
   border-radius: 5px;
   display: block;
   position: absolute;
@@ -1014,6 +1014,12 @@ h1, h2, h3, h4, h5, h6 {
   margin-top: 11.25%;
   background: #111115;
   position: relative;
+}
+.footer .leaf {
+  position: absolute;
+  right: 0;
+  bottom: 71%;
+  z-index: -1;
 }
 .footer .container {
   width: 100%;
@@ -1068,6 +1074,9 @@ h1, h2, h3, h4, h5, h6 {
 .footer .container .row1 .subscribe .email:focus {
   border: 1px solid #4B9200;
 }
+.footer .container .row1 .subscribe .email.mistake:focus {
+  border: 1px solid red;
+}
 .footer .container .row1 .subscribe .submit {
   margin-left: 10px;
   width: 130px;
@@ -1083,6 +1092,22 @@ h1, h2, h3, h4, h5, h6 {
 .footer .container .row1 .subscribe .submit:disabled {
   cursor: auto;
   background: #F1F3F2;
+}
+.footer .container .row1 .subscribe .submit:disabled:active {
+  color: black;
+  border: 1px solid #333B41;
+}
+.footer .container .row1 .subscribe .submit:active {
+  border: 1px solid #4B9200;
+  color: #4B9200;
+}
+.footer .container .row1 .subscribe .submit.mistake {
+  color: red;
+  border: 1px solid red;
+}
+.footer .container .row1 .subscribe .submit.mistake:disabled:active {
+  color: red;
+  border: 1px solid red;
 }
 .footer .container .row2 {
   margin-top: 3.1%;

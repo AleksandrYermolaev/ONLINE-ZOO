@@ -62,7 +62,7 @@
 				&::after {
 					content: 'watch online';
 					@include text-16-500;
-					line-height: 56px;
+					line-height: 55px;
 					border-radius: 25px;
 					display: block;
 					position: absolute;
@@ -424,7 +424,7 @@
 			&::after {
 				content: 'leave feedback';
 				@include text-16-500;
-				line-height: 57px;
+				line-height: 55px;
 				border-radius: 5px;
 				display: block;
 				position: absolute;
@@ -440,176 +440,3 @@
 	}
 }
 
-.footer	{
-	width: 100%;
-	margin-top: 11.25%;
-	background: $footer-color;
-	position: relative;
-	.container {
-		width: 100%;
-		max-width: 1160px;
-		margin: 0 auto;
-		display: flex;
-		flex-direction: column;
-		padding: 40px 0 50px;
-		.row1 {
-			display: flex;
-			justify-content: space-between;
-			.title {
-				@extend %logo;
-			}
-			.subscribe {
-				width: 32%;
-				p {
-					@include text-19-400;
-					font-weight: 300;
-					font-size: 24px;
-					line-height: 28.8px;
-					color: #FFFFFF;
-					margin-bottom: 14px;
-				}
-				.email {
-					width: 61%;
-					@include text-19-400;
-					font-size: 16px;
-					line-height: 140%;
-					padding: 10px;
-					background: transparent;
-					border: 1px solid $color-orange;
-					border-radius: 2px;
-					color: #BDBDBD;
-					transition: $trans-set;
-					&::placeholder {
-						color: #BDBDBD;
-					}
-					&:focus {
-						border: 1px solid $color-green;
-					}
-				}
-				.submit {
-					margin-left: 10px;
-					width: 130px;
-					@include text-16-500;
-					line-height: 42px;
-					color: black;
-					border: 1px solid #333B41;
-					border-radius: 5px;
-					&:disabled {
-						cursor: auto;
-						background: $color-lightgray;
-					}
-				}
-			}
-		}
-		.row2 {
-			margin-top: 3.1%;
-			.button {
-				@include btn-orange;
-				border-radius: 5px;
-				&::after {
-					content: 'donate for volunteers';
-					@include text-16-500;
-					line-height: 57px;
-					border-radius: 5px;
-					display: block;
-					position: absolute;
-					width: 100%;
-					height: 100%;
-					top: 0;
-					left: 0;
-					background: $btn-orange;
-					opacity: 0;
-					transition: $trans-set;
-				}
-			}
-		}
-		.row3 {
-			margin-top: 3.79%;
-			display: flex;
-			justify-content: space-between;
-			.social__list {
-				padding-left: 38px;
-				.social__item {
-					margin-bottom: 14px;
-					&:nth-child(1) .social__link{
-						@extend %social;
-						&::before {
-							background: rgba(196, 196, 196, 0.5) url('../../assets/icons/facebook.png') no-repeat center;
-						}
-						&:hover {
-							&::before {
-								background: $color-green url('../../assets/icons/facebook.png') no-repeat center;
-							}
-						}
-					}
-					&:nth-child(2) .social__link{
-						@extend %social;
-						&::before {
-							background: rgba(196, 196, 196, 0.5) url('../../assets/icons/twitter.png') no-repeat center;
-						}
-						&:hover {
-							&::before {
-								background: $color-green url('../../assets/icons/twitter.png') no-repeat center;
-							}
-						}
-					}
-					&:nth-child(3) .social__link{
-						@extend %social;
-						&::before {
-							background: rgba(196, 196, 196, 0.5) url('../../assets/icons/instagram.png') no-repeat center;
-						}
-						&:hover {
-							&::before {
-								background: $color-green url('../../assets/icons/instagram.png') no-repeat center;
-							}
-						}
-					}
-					&:nth-child(4) .social__link{
-						@extend %social;
-						&::before {
-							background: rgba(196, 196, 196, 0.5) url('../../assets/icons/youtube.png') no-repeat center;
-						}
-						&:hover {
-							&::before {
-								background: $color-green url('../../assets/icons/youtube.png') no-repeat center;
-							}
-						}
-					}
-				}
-			}
-			.menu {
-				align-self: flex-end;
-				padding: 0 0 15px 10%;
-				.menu__list {
-					display: flex;
-					gap: 58px;
-					
-					.text {
-						@include text-16-500;
-						color: #FFFFFF;
-						line-height: 140%;
-						transition: $trans-set;
-						&:hover {
-							color: $color-orange;
-						}
-						&.active {
-							color: $color-orange;
-						}
-					}
-				}
-			}
-			.about {
-				align-self: flex-end;
-				padding: 0 0 12px 0;
-				font-family: $font-roboto;
-				font-weight: 100;
-				font-size: 16px;
-				line-height: 130%;
-				color: rgba(255, 255, 255, 0.8);
-				& :first-child {
-					margin-bottom: 10px;
-				}
-			}
-		}
-	}
-}

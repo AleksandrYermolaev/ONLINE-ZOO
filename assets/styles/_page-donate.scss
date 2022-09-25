@@ -1,0 +1,266 @@
+.main {
+	background: $background-pink;
+}
+.background {
+	background: url("../../assets/images/panda_bg.jpg") center center/100% no-repeat;
+	width: 100%;
+	padding-top: 24.375%;
+}
+.wrapper {
+	width: 100%;
+	max-width: 1160px;
+	margin: 40px auto 180px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	.article {
+		width: 100%;
+		.title {
+			@include text-19-400;
+			font-size: 36px;
+			line-height: 130%;
+			color: #FFFFFF;
+		}
+		.text {
+			margin-top: 10px;
+			@include text-16-500;
+			line-height: 140%;
+			color: #FFFFFF;
+		}
+	}
+	.sub-title {
+		@include text-19-400;
+		font-size: 36px;
+		line-height: 130%;
+		color: $color-orange;
+		align-self: start;
+		margin: 40px 0 60px 0;
+	}
+	.feed-friend {
+		width: 100%;
+		background: rgba(255, 255, 255, 0.52);
+		backdrop-filter: blur(2px);
+		border-radius: 20px;
+		padding: 40px 92px 62px;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		.title {
+			@include text-19-400;
+			font-size: 48px;
+			line-height: 120%;
+			color: $color-orange;
+		}
+		.text {
+			align-self: start;
+			margin: 20px 0 107px;
+			@include text-19-400;
+			font-size: 24px;
+			line-height: 120%;
+			color: $text-color;
+		}
+		.scheme {
+			width: 520px;
+			display: flex;
+			.amount {
+				flex: 0 0 165px;
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+				.number {
+					margin-top: 20px;
+					@include text-16-500;
+					font-size: 72px;
+					line-height: 80%;
+					text-align: center;
+					color: black;
+				}
+				.text {
+					margin: 11px 0 0 0;
+					@include text-19-400;
+					font-size: 16px;
+					line-height: 140%;
+					text-align: center;
+					color: $text-color;
+				}
+			}
+			.cross {
+				display: flex;
+				align-items: center;
+				margin: 0 64px 0 11px;
+			}
+		}
+		.text-small {
+			align-self: start;
+			margin: 48px 0 17px 0;
+			@include text-19-400;
+			font-size: 16px;
+			line-height: 140%;
+			color: black;
+		}
+	}
+	.money-slider {
+		width: 100%;
+		.field {
+			width: 100%;
+			height: 27px;
+			background: #404950;
+			border-radius: 2px;
+			position: relative;
+			.line {
+				width: 93.75%;
+				height: 2px;
+				background: #72828E;
+				position: absolute;
+				left: 31px;
+				top: 12px;
+			}
+			.dot {
+				width: 10px;
+				height: 10px;
+				border-radius: 50%;
+				background: $color-yellow;
+				position: absolute;
+				top: 8px;
+				&:nth-child(2) {
+					left: 26px;
+				}
+				&:nth-child(3) {
+					left: 156px;
+				}
+				&:nth-child(4) {
+					left: 286px;
+				}
+				&:nth-child(5) {
+					left: 416px;
+				}
+				&:nth-child(6) {
+					left: 546px;
+				}
+				&:nth-child(7) {
+					left: 676px;
+				}
+				&:nth-child(8) {
+					left: 806px;
+				}
+				&:nth-child(9) {
+					left: 936px;
+				}
+				&::after {
+					content: "";
+					display: block;
+					width: 40px;
+					height: 40px;
+					border-radius: 50%;
+					position: absolute;
+					top: -16px;
+					left: -14px;
+					cursor: pointer;
+					z-index: 2;
+				}
+				&:hover {
+					background-color: $color-orange;
+					box-shadow: 0 0 5px $color-orange;
+				}
+			}
+			.pointer {
+				position: absolute;
+				width: 97.4%;
+				left: 11px;
+				top: -7px;
+				appearance: none;
+				background: transparent;
+				
+				&::-webkit-slider-thumb {
+					
+					appearance: none;
+					width: 40px;
+					height: 40px;
+					background: url("../../assets/icons/roller_icon.svg")
+				}
+			}
+		}
+		.money {
+			width: 100%;
+			margin-top: 12px;
+			display: flex;
+			.sum {
+				@include text-16-500;
+				font-size: 26px;
+				line-height: 140%;
+				color: $text-color;
+				margin-right: 58px;
+				cursor: pointer;
+				span {
+					font-size: 20px;
+					position: relative;
+					top: -1.5px;
+				}
+				&:nth-child(4) {
+					margin-right: 77px;
+				}
+				&:nth-child(5) {
+					margin-right: 77px;
+				}
+				&:nth-child(6) {
+					margin-right: 77px;
+				}
+				&:nth-child(7) {
+					margin-right: 90px;
+				}
+				&:nth-child(8) {
+					margin-right: 0;
+				}
+				&.active {
+					color: $color-orange;
+				}
+			}
+		}
+	}
+	.amount-container {
+		position: relative;
+		.another-money {
+			margin: 50px 0 25px 0;
+			padding: 16px 9px;
+			width: 268px;
+			@include text-19-400;
+			font-size: 16px;
+			line-height: 140%;
+			color: $text-color;
+			border: 2px solid #929699;
+			border-radius: 2px;
+			background: transparent;
+			&::placeholder {
+				color: #929699;
+			}
+			&::-webkit-outer-spin-button,
+			&::-webkit-inner-spin-button {
+				appearance: none;
+			}
+			&:focus {
+				border: 2px solid $color-green;
+				& ~.dollar{
+					color: $color-green;
+				}
+			}
+			&:invalid {
+				border: 2px solid red;
+				& ~.dollar{
+					color: red;
+				}
+			}
+		}
+		.dollar {
+			@include text-16-500;
+			display: block;
+			width: 10px;
+			height: 20px;
+			font-size: 20px;
+			line-height: 54px;
+			position: absolute;
+			bottom: 60px;
+			right: 10px;
+			color: #929699;
+		}
+	}
+}
