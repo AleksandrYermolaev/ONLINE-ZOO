@@ -10,10 +10,12 @@
 	width: 100%;
 	max-width: 1160px;
 	margin: 40px auto 0px;
-	padding-bottom: 180px;
+	padding-bottom: 178px;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
+	position: relative;
+	left: 10px;
 	.article {
 		width: 100%;
 		.title {
@@ -35,7 +37,7 @@
 		line-height: 130%;
 		color: $color-orange;
 		align-self: start;
-		margin: 40px 0 60px 0;
+		margin: 44px 0 60px 0;
 	}
 	.feed-friend {
 		width: 100%;
@@ -51,6 +53,8 @@
 			font-size: 48px;
 			line-height: 120%;
 			color: $color-orange;
+			position: relative;
+			left: -5px;
 		}
 		.text {
 			align-self: start;
@@ -63,6 +67,8 @@
 		.scheme {
 			width: 520px;
 			display: flex;
+			position: relative;
+			left: -16px;
 			.amount {
 				flex: 0 0 165px;
 				display: flex;
@@ -88,7 +94,7 @@
 			.cross {
 				display: flex;
 				align-items: center;
-				margin: 0 64px 0 11px;
+				margin: -16px 64px 0 11px;
 			}
 		}
 		.text-small {
@@ -221,7 +227,7 @@
 	.amount-container {
 		position: relative;
 		.another-money {
-			margin: 50px 0 25px 0;
+			margin: 50px 0 20px 0;
 			padding: 16px 9px;
 			width: 268px;
 			@include text-19-400;

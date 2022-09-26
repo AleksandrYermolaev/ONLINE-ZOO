@@ -27,7 +27,7 @@
 			align-items: center;
 			
 			.headline {
-				margin: 166px 0 60px 0;
+				margin: 166px 0 60px 10px;
 				@include text-19-400;
 				text-transform: uppercase;
 				text-align: center;
@@ -45,7 +45,7 @@
 				&::before {
 					content: '';
 					display: block;
-					width: 93%;
+					width: 94%;
 					height: 116.25%;
 					border-radius: 50%;
 					background: $gradient-orange;
@@ -58,6 +58,7 @@
 
 			.btn-orange {
 				@include btn-orange;
+				left: 7px;
 				z-index: 2;
 				&::after {
 					content: 'watch online';
@@ -83,6 +84,7 @@
 .backstage {
 	width: 100%;
 	padding-top: 60px;
+	padding-left: 10px;
 	position: relative;
 	
 	
@@ -91,7 +93,8 @@
 		top: -13%;
 		right: 0;
 		z-index: -1;
-		width: 12.5%;
+		width: 11.5%;
+		height: 130%;
 	}
 
 	.container {
@@ -145,6 +148,7 @@
 .pets {
 	width: 100%;
 	margin-top: 11.25%;
+	padding-left: 10px;
 
 	.container {
 		width: 100%;
@@ -207,7 +211,7 @@
 	}
 	.button {
 		@include btn-orange;
-		margin: 5% auto 6%;
+		margin: 5% auto 6.2%;
 		&::after {
 			content: 'choose your favorite';
 			@include text-16-500;
@@ -240,11 +244,13 @@
 	}
 	.flower-strel {
 		position: absolute;
-		right: 0;
+		right: 0px;
 		bottom: 100%;
 		width: 23%;
 	}
 	.container {
+		position: relative;
+		left: 5px;
 		width: 100%;
 		max-width: 1160px;
 		margin: 0 auto;
@@ -261,7 +267,8 @@
 			font-size: 48px;
 			line-height: 120%;
 			color: $color-orange;
-			margin-top: 3.5%;
+			margin-top: 3.6%;
+			padding-left: 12px;
 		}
 		.sub-header {
 			@include text-19-400;
@@ -354,11 +361,12 @@
 
 .testimonials {
 	width: 100%;
-	margin: 8.75% 0 11.25% 0;
+	margin: 9% 0 11.25% 0;
 
 	.container {
 		width: 100%;
 		max-width: 1160px;
+		padding-left: 12px;
 		margin: 0 auto;
 		display: flex;
 		flex-direction: column;

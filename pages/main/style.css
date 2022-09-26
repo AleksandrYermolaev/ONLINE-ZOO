@@ -442,12 +442,13 @@ h1, h2, h3, h4, h5, h6 {
   height: 100%;
   max-width: 1160px;
   margin: 0 auto;
+  padding: 0 0 0 8px;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 .header-desktop .header-container .menu {
-  flex: 0 1 73%;
+  flex: 0 1 72%;
 }
 .header-desktop .header-container .menu .menu__list {
   display: flex;
@@ -508,7 +509,7 @@ h1, h2, h3, h4, h5, h6 {
   align-items: center;
 }
 .top .container .sub-container .headline {
-  margin: 166px 0 60px 0;
+  margin: 166px 0 60px 10px;
   font-family: Roboto, sans-serif;
   font-style: normal;
   font-weight: 400;
@@ -528,7 +529,7 @@ h1, h2, h3, h4, h5, h6 {
 .top .container .sub-container .headline::before {
   content: "";
   display: block;
-  width: 93%;
+  width: 94%;
   height: 116.25%;
   border-radius: 50%;
   background: linear-gradient(113.96deg, #F9804B 1.49%, #FE9013 101.44%);
@@ -552,6 +553,7 @@ h1, h2, h3, h4, h5, h6 {
   text-align: center;
   text-transform: uppercase;
   transition: 0.5s ease;
+  left: 7px;
   z-index: 2;
 }
 .top .container .sub-container .btn-orange:hover::after {
@@ -582,6 +584,7 @@ h1, h2, h3, h4, h5, h6 {
 .backstage {
   width: 100%;
   padding-top: 60px;
+  padding-left: 10px;
   position: relative;
 }
 .backstage .flower {
@@ -589,7 +592,8 @@ h1, h2, h3, h4, h5, h6 {
   top: -13%;
   right: 0;
   z-index: -1;
-  width: 12.5%;
+  width: 11.5%;
+  height: 130%;
 }
 .backstage .container {
   width: 100%;
@@ -643,6 +647,7 @@ h1, h2, h3, h4, h5, h6 {
 .pets {
   width: 100%;
   margin-top: 11.25%;
+  padding-left: 10px;
 }
 .pets .container {
   width: 100%;
@@ -716,7 +721,7 @@ h1, h2, h3, h4, h5, h6 {
   text-align: center;
   text-transform: uppercase;
   transition: 0.5s ease;
-  margin: 5% auto 6%;
+  margin: 5% auto 6.2%;
 }
 .pets .button:hover::after {
   opacity: 1;
@@ -757,11 +762,13 @@ h1, h2, h3, h4, h5, h6 {
 }
 .friend .flower-strel {
   position: absolute;
-  right: 0;
+  right: 0px;
   bottom: 100%;
   width: 23%;
 }
 .friend .container {
+  position: relative;
+  left: 5px;
   width: 100%;
   max-width: 1160px;
   margin: 0 auto;
@@ -781,7 +788,8 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 48px;
   line-height: 120%;
   color: #FE9013;
-  margin-top: 3.5%;
+  margin-top: 3.6%;
+  padding-left: 12px;
 }
 .friend .container .sub-header {
   font-family: Roboto, sans-serif;
@@ -900,11 +908,12 @@ h1, h2, h3, h4, h5, h6 {
 
 .testimonials {
   width: 100%;
-  margin: 8.75% 0 11.25% 0;
+  margin: 9% 0 11.25% 0;
 }
 .testimonials .container {
   width: 100%;
   max-width: 1160px;
+  padding-left: 12px;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
@@ -1026,7 +1035,9 @@ h1, h2, h3, h4, h5, h6 {
   margin: 0 auto;
   display: flex;
   flex-direction: column;
-  padding: 40px 0 50px;
+  padding: 44px 0 50px;
+  position: relative;
+  left: 9px;
 }
 .footer .container .row1 {
   display: flex;

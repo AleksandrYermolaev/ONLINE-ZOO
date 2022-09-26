@@ -14,7 +14,9 @@
 		margin: 0 auto;
 		display: flex;
 		flex-direction: column;
-		padding: 40px 0 50px;
+		padding: 44px 0 50px;
+		position: relative;
+		left: 9px;
 		.row1 {
 			display: flex;
 			justify-content: space-between;

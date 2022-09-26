@@ -211,12 +211,13 @@ h1, h2, h3, h4, h5, h6 {
   height: 100%;
   max-width: 1160px;
   margin: 0 auto;
+  padding: 0 0 0 8px;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 .header-desktop .header-container .menu {
-  flex: 0 1 73%;
+  flex: 0 1 72%;
 }
 .header-desktop .header-container .menu .menu__list {
   display: flex;
@@ -263,10 +264,12 @@ h1, h2, h3, h4, h5, h6 {
   width: 100%;
   max-width: 1160px;
   margin: 40px auto 0px;
-  padding-bottom: 180px;
+  padding-bottom: 178px;
   display: flex;
   flex-direction: column;
   align-items: center;
+  position: relative;
+  left: 10px;
 }
 .wrapper .article {
   width: 100%;
@@ -298,7 +301,7 @@ h1, h2, h3, h4, h5, h6 {
   line-height: 130%;
   color: #FE9013;
   align-self: start;
-  margin: 40px 0 60px 0;
+  margin: 44px 0 60px 0;
 }
 .wrapper .feed-friend {
   width: 100%;
@@ -319,6 +322,8 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 48px;
   line-height: 120%;
   color: #FE9013;
+  position: relative;
+  left: -5px;
 }
 .wrapper .feed-friend .text {
   align-self: start;
@@ -334,6 +339,8 @@ h1, h2, h3, h4, h5, h6 {
 .wrapper .feed-friend .scheme {
   width: 520px;
   display: flex;
+  position: relative;
+  left: -16px;
 }
 .wrapper .feed-friend .scheme .amount {
   flex: 0 0 165px;
@@ -366,7 +373,7 @@ h1, h2, h3, h4, h5, h6 {
 .wrapper .feed-friend .scheme .cross {
   display: flex;
   align-items: center;
-  margin: 0 64px 0 11px;
+  margin: -16px 64px 0 11px;
 }
 .wrapper .feed-friend .text-small {
   align-self: start;
@@ -505,7 +512,7 @@ h1, h2, h3, h4, h5, h6 {
   position: relative;
 }
 .wrapper .amount-container .another-money {
-  margin: 50px 0 25px 0;
+  margin: 50px 0 20px 0;
   padding: 16px 9px;
   width: 268px;
   font-family: Roboto, sans-serif;
@@ -662,7 +669,9 @@ h1, h2, h3, h4, h5, h6 {
   margin: 0 auto;
   display: flex;
   flex-direction: column;
-  padding: 40px 0 50px;
+  padding: 44px 0 50px;
+  position: relative;
+  left: 9px;
 }
 .footer .container .row1 {
   display: flex;
@@ -857,4 +866,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 .footer .container .row3 .about :first-child {
   margin-bottom: 10px;
+}
+
+.footer .container {
+  padding: 37px 0 50px;
 }/*# sourceMappingURL=style.css.map */
