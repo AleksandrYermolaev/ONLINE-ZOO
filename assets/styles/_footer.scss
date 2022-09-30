@@ -7,6 +7,14 @@
 		right: 0;
 		bottom: 71%;
 		z-index: -1;
+		@media (width: 1000px) {
+			bottom: 82%;
+			width: 200px;
+		}
+		@media (max-width: 640px) {
+			bottom: 80%;
+			width: 18%;
+		}
 	}
 	.container {
 		width: 100%;
@@ -17,6 +25,13 @@
 		padding: 44px 0 50px;
 		position: relative;
 		left: 9px;
+		@media (width: 1000px) {
+			padding: 40px 35px 50px;
+			width: 98%;
+		}
+		@media (max-width: 640px) {
+			padding: 13px 10px 12px 10px;
+		}
 		.row1 {
 			display: flex;
 			justify-content: space-between;
@@ -25,6 +40,12 @@
 			}
 			.subscribe {
 				width: 32%;
+				@media (width: 1000px) {
+					width: 42%;
+				}
+				@media (max-width: 640px) {
+					display: none;
+				}
 				p {
 					@include text-19-400;
 					font-weight: 300;
@@ -35,6 +56,9 @@
 				}
 				.email {
 					width: 61%;
+					@media (width: 1000px) {
+						width: 228px;
+					}
 					@include text-19-400;
 					font-size: 16px;
 					line-height: 140%;
@@ -59,6 +83,9 @@
 				.submit {
 					margin-left: 10px;
 					width: 130px;
+					@media (width: 1000px) {
+						margin-left: 5px;
+					}
 					@include text-16-500;
 					line-height: 42px;
 					color: black;
@@ -91,6 +118,9 @@
 		}
 		.row2 {
 			margin-top: 3.1%;
+			@media (max-width: 640px) {
+				margin-top: 4.5%;
+			}
 			.button {
 				@include btn-orange;
 				border-radius: 5px;
@@ -113,10 +143,21 @@
 		}
 		.row3 {
 			margin-top: 3.79%;
+			@media (width: 1000px) {
+				margin-top: 50px;
+			}
+			@media (width: 640px) {
+				margin-top: 67px;
+			}
 			display: flex;
 			justify-content: space-between;
 			.social__list {
 				padding-left: 38px;
+				@media (max-width: 640px) {
+					position: absolute;
+					top: 4px;
+					right: 16px;
+				}
 				.social__item {
 					margin-bottom: 14px;
 					&:nth-child(1) .social__link{
@@ -163,14 +204,25 @@
 							}
 						}
 					}
+					
 				}
 			}
 			.menu {
 				align-self: flex-end;
-				padding: 0 0 15px 10%;
+				@media (max-width: 640px) {
+					padding: 0 0 10px 0;
+					position: relative;
+					left: -46px;
+				}
 				.menu__list {
 					display: flex;
 					gap: 58px;
+					@media (width: 1000px) {
+						gap: 48px;
+					}
+					@media (max-width: 640px) {
+						gap: 37px;
+					}
 					
 					.text {
 						@include text-16-500;
@@ -189,6 +241,17 @@
 			.about {
 				align-self: flex-end;
 				padding: 0 0 12px 0;
+				@media (width: 1000px) {
+					padding: 0 0 15px 0px;
+					position: relative;
+					left: 5px;
+				}
+				@media (width: 640px) {
+					padding: 0 0 15px 0px;
+					position: relative;
+					left: -20px;
+					top: 4px;
+				}
 				font-family: $font-roboto;
 				font-weight: 100;
 				font-size: 16px;

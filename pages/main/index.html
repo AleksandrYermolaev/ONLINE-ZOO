@@ -29,9 +29,27 @@
 		</div>
 	</header>
 
+	<header class="header-mobile">
+		<div class="header-container">
+			<div class="title">
+				<h1 class="title__text"><a href="https://aleksandryermolaev.github.io/ONLINE-ZOO/pages/main/" class="text">PetStory online</a></h1>
+			</div>
+			
+			<div class="menu-button">
+				<div class="stick"></div>
+				<div class="stick"></div>
+				<div class="stick"></div>
+			</div>
+		</div>
+	</header>
+
 	<main class="main">
 		<section class="top">
-			<img src="../../assets/images/GiantPanda.jpg" alt="GiantPanda" class="image__panda">
+			<picture class="image__panda">
+				<source srcset="../../assets/images/GiantPanda640px.jpg" media="(max-width: 640px)" />
+				<source srcset="../../assets/images/GiantPanda1000px.jpg" media="(max-width: 1000px)" />
+				<img src="../../assets/images/GiantPanda.jpg" />
+			</picture>
 			<div class="container">
 				<div class="sub-container">
 					<div class="headline">
@@ -70,7 +88,9 @@
 				</div>
 				<div class="all-pets">
 					<div class="pets__panda">
-						<a href="#" class="gradient"><img src="../../assets/images/pandas.jpg" alt="pandas" class="panda"></a> 
+						<a href="#" class="gradient">
+							<img src="../../assets/images/pandas.jpg" alt="pandas" class="panda">
+						</a> 
 						<div class="background">
 							<div class="desc">
 								<p class="desc__header">GIANT PANDAS</p>
@@ -137,7 +157,10 @@
 		</section>
 
 		<section class="friend">
-			<img src="../../assets/images/palm_foto.svg" alt="palm" class="flower-palm">
+			<picture class="flower-palm">
+				<source srcset="../../assets/images/palm_foto1000px.svg" media="(max-width: 1000px)" />
+				<img src="../../assets/images/palm_foto.svg" />
+			</picture>
 			<img src="../../assets/images/strelitzia 1.svg" alt="palm" class="flower-strel">
 			<div class="container">
 				<h2 class="header">
@@ -153,17 +176,19 @@
 							<img src="../../assets/images/pay.svg" alt="pay with card" class="pay">
 						</div>
 					</div>
-					<div class="arrow">
-						<img src="../../assets/images/arrow.svg" alt="next step" class="arrow">
-					</div>
+					<picture class="arrow">
+						<source srcset="../../assets/icons/arrow-green.svg" media="(max-width: 640px)" />
+						<img src="../../assets/images/arrow.svg" />
+					</picture>
 					<div class="card2">
 						<div class="contain">
 							<img src="../../assets/images/moneytree.svg" alt="zoo take money" class="money">
 						</div>
 					</div>
-					<div class="arrow">
-						<img src="../../assets/images/arrow.svg" alt="next step" class="arrow">
-					</div>
+					<picture class="arrow">
+						<source srcset="../../assets/icons/arrow-green.svg" media="(max-width: 640px)" />
+						<img src="../../assets/images/arrow.svg" />
+					</picture>
 					<div class="card3">
 						<div class="contain">
 							<img src="../../assets/images/monkey.svg" alt="animals get food" class="animals">
