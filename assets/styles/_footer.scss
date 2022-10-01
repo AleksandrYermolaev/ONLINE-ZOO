@@ -7,6 +7,18 @@
 		right: 0;
 		bottom: 71%;
 		z-index: -1;
+		@media (max-width: 1200px) {
+			bottom: 82%;
+			width: 200px;
+		}
+		@media (max-width: 640px) {
+			bottom: 80%;
+			width: 18%;
+		}
+		@media (max-width: 600px) {
+			bottom: 91%;
+			width: 18%;
+		}
 	}
 	.container {
 		width: 100%;
@@ -17,14 +29,51 @@
 		padding: 44px 0 50px;
 		position: relative;
 		left: 9px;
+		@media (max-width: 1200px) {
+			padding: 40px 35px 50px;
+			width: 98%;
+		}
+		@media (width: 1000px) {
+			padding: 40px 25px 50px;
+			width: 98%;
+		}
+		
+		@media (max-width: 999px) {
+			padding: 13px 10px 12px 19px;
+			left: 0;
+		}
+		@media (width: 640px) {
+			left: -5px;
+		}
+		@media (max-width: 600px) {
+			padding: 20px 10px 20px 10px;
+			left: 0;
+		}
 		.row1 {
 			display: flex;
 			justify-content: space-between;
+			@media (max-width: 600px) {
+				justify-content: center;
+			}
 			.title {
 				@extend %logo;
 			}
 			.subscribe {
 				width: 32%;
+				@media (max-width: 1200px) {
+					width: 42%;
+				}
+				@media (width: 1000px) {
+					width: 42%;
+					position: relative;
+					left: 0;
+				}
+				@media (max-width: 999px) {
+					width: 52%;
+				}
+				@media (max-width: 750px) {
+					display: none;
+				}
 				p {
 					@include text-19-400;
 					font-weight: 300;
@@ -35,6 +84,9 @@
 				}
 				.email {
 					width: 61%;
+					@media (max-width: 1200px) {
+						width: 228px;
+					}
 					@include text-19-400;
 					font-size: 16px;
 					line-height: 140%;
@@ -59,6 +111,9 @@
 				.submit {
 					margin-left: 10px;
 					width: 130px;
+					@media (max-width: 1200px) {
+						margin-left: 5px;
+					}
 					@include text-16-500;
 					line-height: 42px;
 					color: black;
@@ -91,6 +146,12 @@
 		}
 		.row2 {
 			margin-top: 3.1%;
+			@media (max-width: 750px) {
+				margin-top: 5%;
+			}
+			@media (max-width: 600px) {
+				margin: 86px auto 0 auto;
+			}
 			.button {
 				@include btn-orange;
 				border-radius: 5px;
@@ -113,12 +174,37 @@
 		}
 		.row3 {
 			margin-top: 3.79%;
+			@media (max-width: 1200px) {
+				margin-top: 50px;
+			}
+			@media (max-width: 750px) {
+				margin-top: 65px;
+				margin-left: 5px;
+			}
+			@media (max-width: 600px) {
+				margin-top: 109px;
+			}
 			display: flex;
 			justify-content: space-between;
 			.social__list {
 				padding-left: 38px;
+				@media (max-width: 750px) {
+					position: absolute;
+					top: 0px;
+					right: 0px;
+				}
+				@media (max-width: 600px) {
+					position: absolute;
+					top: 62px;
+					right: 15.9%;
+					display: flex;
+					gap: 56px;
+				}
 				.social__item {
 					margin-bottom: 14px;
+					@media (max-width: 750px) {
+						margin-bottom: 16px;
+					}
 					&:nth-child(1) .social__link{
 						@extend %social;
 						&::before {
@@ -163,14 +249,44 @@
 							}
 						}
 					}
+					
 				}
 			}
 			.menu {
 				align-self: flex-end;
-				padding: 0 0 15px 10%;
+				@media (width: 1000px) {
+					position: relative;
+					top: -15px;
+					left: 48px;
+				}
+				@media (max-width: 750px) {
+					padding: 0 0 10px 0;
+					position: relative;
+					left: -40px;
+				}
+				@media (max-width: 600px) {
+					align-self: center;
+					padding: 0 10px;
+					position: relative;
+					left: 0;
+				}
+				@media (width: 320px) {
+					padding: 0;
+					position: relative;
+					left: -7px;
+				}
 				.menu__list {
 					display: flex;
 					gap: 58px;
+					@media (max-width: 1200px) {
+						gap: 48px;
+					}
+					@media (max-width: 750px) {
+						gap: 37px;
+					}
+					@media (max-width: 600px) {
+						gap: 30px;
+					}
 					
 					.text {
 						@include text-16-500;
@@ -189,6 +305,35 @@
 			.about {
 				align-self: flex-end;
 				padding: 0 0 12px 0;
+				@media (max-width: 1200px) {
+					padding: 0 0 15px 0px;
+					position: relative;
+					left: 5px;
+				}
+				@media (width: 1000px) {
+					position: relative;
+					left: 8px;
+				}
+				@media (max-width: 750px) {
+					padding: 0 0 15px 0px;
+					position: relative;
+					left: 0px;
+					top: 4px;
+				}
+				@media (max-width: 600px) {
+					font-size: 15px;
+					padding: 0 0 15px 0px;
+					position: absolute;
+					right: 11px;
+					top: 212px;
+				}
+				@media (width: 320px) {
+					font-size: 15px;
+					position: absolute;
+					width: 215px;
+					left: 92px;
+					top: 213px;
+				}
 				font-family: $font-roboto;
 				font-weight: 100;
 				font-size: 16px;
@@ -196,6 +341,276 @@
 				color: rgba(255, 255, 255, 0.8);
 				& :first-child {
 					margin-bottom: 10px;
+					@media (max-width: 600px) {
+						margin-bottom: 12px;
+					}
+				}
+			}
+		}
+	}
+}
+
+@media (width: 1600px) {
+	.footer	{
+		width: 100%;
+		background: $footer-color;
+		position: relative;	
+		.leaf {
+			position: absolute;
+			right: 0;
+			bottom: 71%;
+			z-index: -1;
+		}
+		.container {
+			width: 100%;
+			max-width: 1160px;
+			margin: 0 auto;
+			display: flex;
+			flex-direction: column;
+			padding: 44px 0 50px;
+			position: relative;
+			left: 0px;
+			top: -3px;
+			
+			.row1 {
+				display: flex;
+				justify-content: space-between;
+				
+				.title {
+					@extend %logo;
+				}
+				.subscribe {
+					width: 32%;
+				
+					p {
+						@include text-19-400;
+						font-weight: 300;
+						font-size: 24px;
+						line-height: 28.8px;
+						color: #FFFFFF;
+						margin-bottom: 14px;
+					}
+					.email {
+						width: 61%;
+						@media (max-width: 1200px) {
+							width: 228px;
+						}
+						@include text-19-400;
+						font-size: 16px;
+						line-height: 140%;
+						padding: 10px;
+						background: transparent;
+						border: 1px solid $color-orange;
+						border-radius: 2px;
+						color: #BDBDBD;
+						transition: $trans-set;
+						&::placeholder {
+							color: #BDBDBD;
+						}
+						&:focus {
+							border: 1px solid $color-green;
+						}
+						&.mistake {
+							&:focus {
+								border: 1px solid red;
+							}
+						}
+					}
+					.submit {
+						margin-left: 10px;
+						width: 130px;
+						@media (max-width: 1200px) {
+							margin-left: 5px;
+						}
+						@include text-16-500;
+						line-height: 42px;
+						color: black;
+						border: 1px solid #333B41;
+						border-radius: 5px;
+						&:disabled {
+							cursor: auto;
+							background: $color-lightgray;
+							&:active {
+								color: black;
+								border: 1px solid #333B41;
+							}
+						}
+						&:active {
+							border: 1px solid $color-green;
+							color: $color-green;
+						}
+						&.mistake {
+							color: red;
+							border: 1px solid red;
+							&:disabled {
+								&:active {
+									color: red;
+									border: 1px solid red;
+								}
+							}
+						}
+					}
+				}
+			}
+			.row2 {
+				margin-top: 2.7%;
+				
+				.button {
+					@include btn-orange;
+					border-radius: 5px;
+					&::after {
+						content: 'donate for volunteers';
+						@include text-16-500;
+						line-height: 57px;
+						border-radius: 5px;
+						display: block;
+						position: absolute;
+						width: 100%;
+						height: 100%;
+						top: 0;
+						left: 0;
+						background: $btn-orange;
+						opacity: 0;
+						transition: $trans-set;
+					}
+				}
+			}
+			.row3 {
+				margin-top: 3.79%;
+				display: flex;
+				justify-content: space-between;
+				.social__list {
+					padding-left: 38px;
+					@media (max-width: 750px) {
+						position: absolute;
+						top: 4px;
+						right: 10px;
+					}
+					@media (max-width: 600px) {
+						position: absolute;
+						top: 62px;
+						right: 15.9%;
+						display: flex;
+						gap: 56px;
+					}
+					.social__item {
+						margin-bottom: 14px;
+						&:nth-child(1) .social__link{
+							@extend %social;
+							&::before {
+								background: rgba(196, 196, 196, 0.5) url('../../assets/icons/facebook.png') no-repeat center;
+							}
+							&:hover {
+								&::before {
+									background: $color-green url('../../assets/icons/facebook.png') no-repeat center;
+								}
+							}
+						}
+						&:nth-child(2) .social__link{
+							@extend %social;
+							&::before {
+								background: rgba(196, 196, 196, 0.5) url('../../assets/icons/twitter.png') no-repeat center;
+							}
+							&:hover {
+								&::before {
+									background: $color-green url('../../assets/icons/twitter.png') no-repeat center;
+								}
+							}
+						}
+						&:nth-child(3) .social__link{
+							@extend %social;
+							&::before {
+								background: rgba(196, 196, 196, 0.5) url('../../assets/icons/instagram.png') no-repeat center;
+							}
+							&:hover {
+								&::before {
+									background: $color-green url('../../assets/icons/instagram.png') no-repeat center;
+								}
+							}
+						}
+						&:nth-child(4) .social__link{
+							@extend %social;
+							&::before {
+								background: rgba(196, 196, 196, 0.5) url('../../assets/icons/youtube.png') no-repeat center;
+							}
+							&:hover {
+								&::before {
+									background: $color-green url('../../assets/icons/youtube.png') no-repeat center;
+								}
+							}
+						}
+						
+					}
+				}
+				.menu {
+					align-self: flex-end;
+					position: relative;
+					top: -12px;
+					left: 60px;
+					.menu__list {
+						display: flex;
+						gap: 58px;
+						@media (max-width: 1200px) {
+							gap: 48px;
+						}
+						@media (max-width: 750px) {
+							gap: 37px;
+						}
+						@media (max-width: 600px) {
+							gap: 30px;
+						}
+						
+						.text {
+							@include text-16-500;
+							color: #FFFFFF;
+							line-height: 140%;
+							transition: $trans-set;
+							&:hover {
+								color: $color-orange;
+							}
+							&.active {
+								color: $color-orange;
+							}
+						}
+					}
+				}
+				.about {
+					align-self: flex-end;
+					padding: 0 0 12px 0;
+					@media (max-width: 1200px) {
+						padding: 0 0 15px 0px;
+						position: relative;
+						left: 5px;
+					}
+					@media (width: 1000px) {
+						position: relative;
+						left: -18px;
+						top: -2px;
+					}
+					@media (max-width: 750px) {
+						padding: 0 0 15px 0px;
+						position: relative;
+						left: -12px;
+						top: 4px;
+					}
+					@media (max-width: 600px) {
+						font-size: 15px;
+						padding: 0 0 15px 0px;
+						position: absolute;
+						right: 11px;
+						top: 212px;
+					}
+					font-family: $font-roboto;
+					font-weight: 100;
+					font-size: 16px;
+					line-height: 130%;
+					color: rgba(255, 255, 255, 0.8);
+					& :first-child {
+						margin-bottom: 10px;
+						@media (max-width: 600px) {
+							margin-bottom: 12px;
+						}
+					}
 				}
 			}
 		}
