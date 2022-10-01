@@ -1,21 +1,32 @@
 .main {
 	background: $background-pink;
+	overflow: hidden;
 }
 .background {
 	background: url("../../assets/images/panda_bg.jpg") center center/100% no-repeat;
 	width: 100%;
 	padding-top: 24.375%;
+	@media (max-width: 1000px) {
+		background: url("../../assets/images/panda_bg1000px.jpg") center center/100% no-repeat;
+		width: 100%;
+		padding-top: 390px;
+	}
 }
 .wrapper {
 	width: 100%;
 	max-width: 1160px;
 	margin: 40px auto 0px;
 	padding-bottom: 178px;
+	@include go-adaptive1600('padding-bottom', 178, 30);
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 	position: relative;
-	left: 10px;
+	//left: 10px;
+	@media (max-width: 1200px) {
+		max-width: 940px;
+		left: 0;
+	}
 	.article {
 		width: 100%;
 		.title {
@@ -23,12 +34,14 @@
 			font-size: 36px;
 			line-height: 130%;
 			color: #FFFFFF;
+			@include go-adaptive1600('width', 1160, 780)
 		}
 		.text {
-			margin-top: 10px;
+			@include go-adaptive1600('margin-top', 10, 30);
 			@include text-16-500;
 			line-height: 140%;
 			color: #FFFFFF;
+			@include go-adaptive1600('width', 1160, 940)
 		}
 	}
 	.sub-title {
@@ -38,6 +51,7 @@
 		color: $color-orange;
 		align-self: start;
 		margin: 44px 0 60px 0;
+		@include go-adaptive1600('margin-bottom', 60, 40);
 	}
 	.feed-friend {
 		width: 100%;
@@ -48,6 +62,10 @@
 		display: flex;
 		flex-direction: column;
 		align-items: center;
+		@include go-adaptive1600('padding-top', 40, 20);
+		@include go-adaptive1600('padding-left', 92, 44);
+		@include go-adaptive1600('padding-bottom', 62, 46);
+		@include go-adaptive1600('padding-right', 92, 44);
 		.title {
 			@include text-19-400;
 			font-size: 48px;
@@ -55,10 +73,13 @@
 			color: $color-orange;
 			position: relative;
 			left: -5px;
+
 		}
 		.text {
 			align-self: start;
 			margin: 20px 0 107px;
+			@include go-adaptive1600('margin-top', 20, 10);
+			@include go-adaptive1600('margin-bottom', 107, 107);
 			@include text-19-400;
 			font-size: 24px;
 			line-height: 120%;
@@ -104,10 +125,16 @@
 			font-size: 16px;
 			line-height: 140%;
 			color: black;
+			@media (max-width: 1200px) {
+				padding-left: 20px;
+			}
 		}
 	}
 	.money-slider {
 		width: 100%;
+		@media (max-width: 1200px) {
+			width: 810px;
+		}
 		.field {
 			width: 100%;
 			height: 27px;
@@ -121,6 +148,10 @@
 				position: absolute;
 				left: 31px;
 				top: 12px;
+				@media (max-width: 1200px) {
+					width: 785px;
+					left: 12px;
+				}
 			}
 			.dot {
 				width: 10px;
@@ -131,27 +162,51 @@
 				top: 8px;
 				&:nth-child(2) {
 					left: 26px;
+					@media (max-width: 1200px) {
+						left: 11px;
+					}
 				}
 				&:nth-child(3) {
 					left: 156px;
+					@media (max-width: 1200px) {
+						left: 141px;
+					}
 				}
 				&:nth-child(4) {
 					left: 286px;
+					@media (max-width: 1200px) {
+						left: 271px;
+					}
 				}
 				&:nth-child(5) {
 					left: 416px;
+					@media (max-width: 1200px) {
+						left: 401px;
+					}
 				}
 				&:nth-child(6) {
 					left: 546px;
+					@media (max-width: 1200px) {
+						left: 531px;
+					}
 				}
 				&:nth-child(7) {
 					left: 676px;
+					@media (max-width: 1200px) {
+						left: 661px;
+					}
 				}
 				&:nth-child(8) {
 					left: 806px;
+					@media (max-width: 1200px) {
+						left: 791px;
+					}
 				}
 				&:nth-child(9) {
 					left: 936px;
+					@media (max-width: 1200px) {
+						display: none;
+					}
 				}
 				&::after {
 					content: "";
@@ -177,9 +232,11 @@
 				top: -7px;
 				appearance: none;
 				background: transparent;
-				
+				@media (max-width: 1200px) {
+					width: 950px;
+					left: -4px;
+				}
 				&::-webkit-slider-thumb {
-					
 					appearance: none;
 					width: 40px;
 					height: 40px;
@@ -203,6 +260,11 @@
 					position: relative;
 					top: -1.5px;
 				}
+				@media (max-width: 1200px) {
+					&:nth-child(1) {
+						display: none;
+					}
+				}
 				&:nth-child(4) {
 					margin-right: 77px;
 				}
@@ -211,6 +273,9 @@
 				}
 				&:nth-child(6) {
 					margin-right: 77px;
+					@media (max-width: 1200px) {
+						margin-right: 74px;
+					}
 				}
 				&:nth-child(7) {
 					margin-right: 90px;
@@ -227,8 +292,12 @@
 	.amount-container {
 		position: relative;
 		.another-money {
-			margin: 50px 0 20px 0;
+			margin: 45px 0 20px 0;
 			padding: 16px 9px;
+			@media (max-width: 1200px) {
+				margin: 50px 0 26px 0;
+				padding: 12px 5px;
+			}
 			width: 268px;
 			@include text-19-400;
 			font-size: 16px;
@@ -328,5 +397,28 @@
 		font-weight: 400;
 		line-height: 140%;
 		color: $text-color;
+	}
+}
+.footer {
+	padding-top: 5px;
+}
+@media (max-width: 1200px) {
+		.footer {
+		padding: 2px 35px 0 10px;
+		.container {
+			.row2 {
+				position: relative;
+				top: 5px;
+			}
+			.row3 {
+				.menu {
+					.menu__list{
+
+						position: relative;
+						left: 15px;
+					}
+				}
+			}
+		}
 	}
 }

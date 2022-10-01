@@ -103,6 +103,13 @@ $trans-set: 0.5s ease;
 		#{$property}: calc(#{$minSize + px} + #{$addSize} * ((100vw - 640px) / (900 - 640)));
 	}
 }
+@mixin go-adaptive1600($property, $startSize, $minSize) {
+	$addSize: $startSize - $minSize;
+	#{$property}: $startSize + px;
+	@media (max-width: 1600px) {
+		#{$property}: calc(#{$minSize + px} + #{$addSize} * ((100vw - 1000px) / (1600 - 1000)));
+	}
+}
 
 %logo {
 	width: 82px;
