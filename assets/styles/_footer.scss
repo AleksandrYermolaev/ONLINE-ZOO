@@ -7,12 +7,16 @@
 		right: 0;
 		bottom: 71%;
 		z-index: -1;
-		@media (width: 1000px) {
+		@media (max-width: 1200px) {
 			bottom: 82%;
 			width: 200px;
 		}
 		@media (max-width: 640px) {
 			bottom: 80%;
+			width: 18%;
+		}
+		@media (max-width: 600px) {
+			bottom: 91%;
 			width: 18%;
 		}
 	}
@@ -25,25 +29,45 @@
 		padding: 44px 0 50px;
 		position: relative;
 		left: 9px;
-		@media (width: 1000px) {
+		@media (max-width: 1200px) {
 			padding: 40px 35px 50px;
 			width: 98%;
 		}
-		@media (max-width: 640px) {
-			padding: 13px 10px 12px 10px;
+		@media (width: 1000px) {
+			padding: 40px 13px 50px;
+			width: 98%;
+		}
+		@media (max-width: 999px) {
+			padding: 13px 10px 12px 19px;
+			left: 0;
+		}
+		@media (max-width: 600px) {
+			padding: 20px 10px 20px 10px;
+			left: 0;
 		}
 		.row1 {
 			display: flex;
 			justify-content: space-between;
+			@media (max-width: 600px) {
+				justify-content: center;
+			}
 			.title {
 				@extend %logo;
 			}
 			.subscribe {
 				width: 32%;
-				@media (width: 1000px) {
+				@media (max-width: 1200px) {
 					width: 42%;
 				}
-				@media (max-width: 640px) {
+				@media (width: 1000px) {
+					width: 42%;
+					position: relative;
+					left: -15px;
+				}
+				@media (max-width: 999px) {
+					width: 52%;
+				}
+				@media (max-width: 750px) {
 					display: none;
 				}
 				p {
@@ -56,7 +80,7 @@
 				}
 				.email {
 					width: 61%;
-					@media (width: 1000px) {
+					@media (max-width: 1200px) {
 						width: 228px;
 					}
 					@include text-19-400;
@@ -83,7 +107,7 @@
 				.submit {
 					margin-left: 10px;
 					width: 130px;
-					@media (width: 1000px) {
+					@media (max-width: 1200px) {
 						margin-left: 5px;
 					}
 					@include text-16-500;
@@ -118,8 +142,11 @@
 		}
 		.row2 {
 			margin-top: 3.1%;
-			@media (max-width: 640px) {
-				margin-top: 4.5%;
+			@media (max-width: 750px) {
+				margin-top: 5%;
+			}
+			@media (max-width: 600px) {
+				margin: 86px auto 0 auto;
 			}
 			.button {
 				@include btn-orange;
@@ -143,20 +170,30 @@
 		}
 		.row3 {
 			margin-top: 3.79%;
-			@media (width: 1000px) {
+			@media (max-width: 1200px) {
 				margin-top: 50px;
 			}
-			@media (width: 640px) {
-				margin-top: 67px;
+			@media (width: 750px) {
+				margin-top: 62px;
+			}
+			@media (max-width: 600px) {
+				margin-top: 109px;
 			}
 			display: flex;
 			justify-content: space-between;
 			.social__list {
 				padding-left: 38px;
-				@media (max-width: 640px) {
+				@media (max-width: 750px) {
 					position: absolute;
 					top: 4px;
-					right: 16px;
+					right: 10px;
+				}
+				@media (max-width: 600px) {
+					position: absolute;
+					top: 62px;
+					right: 15.9%;
+					display: flex;
+					gap: 56px;
 				}
 				.social__item {
 					margin-bottom: 14px;
@@ -209,19 +246,33 @@
 			}
 			.menu {
 				align-self: flex-end;
-				@media (max-width: 640px) {
+				@media (width: 1000px) {
+					position: relative;
+					top: -17px;
+					left: 37px;
+				}
+				@media (max-width: 750px) {
 					padding: 0 0 10px 0;
 					position: relative;
-					left: -46px;
+					left: -40px;
+				}
+				@media (max-width: 600px) {
+					align-self: center;
+					padding: 0 10px;
+					position: relative;
+					left: 0;
 				}
 				.menu__list {
 					display: flex;
 					gap: 58px;
-					@media (width: 1000px) {
+					@media (max-width: 1200px) {
 						gap: 48px;
 					}
-					@media (max-width: 640px) {
+					@media (max-width: 750px) {
 						gap: 37px;
+					}
+					@media (max-width: 600px) {
+						gap: 30px;
 					}
 					
 					.text {
@@ -241,16 +292,28 @@
 			.about {
 				align-self: flex-end;
 				padding: 0 0 12px 0;
-				@media (width: 1000px) {
+				@media (max-width: 1200px) {
 					padding: 0 0 15px 0px;
 					position: relative;
 					left: 5px;
 				}
-				@media (width: 640px) {
+				@media (width: 1000px) {
+					position: relative;
+					left: -18px;
+					top: -2px;
+				}
+				@media (max-width: 750px) {
 					padding: 0 0 15px 0px;
 					position: relative;
-					left: -20px;
+					left: -12px;
 					top: 4px;
+				}
+				@media (max-width: 600px) {
+					font-size: 15px;
+					padding: 0 0 15px 0px;
+					position: absolute;
+					right: 11px;
+					top: 212px;
 				}
 				font-family: $font-roboto;
 				font-weight: 100;
@@ -259,6 +322,9 @@
 				color: rgba(255, 255, 255, 0.8);
 				& :first-child {
 					margin-bottom: 10px;
+					@media (max-width: 600px) {
+						margin-bottom: 12px;
+					}
 				}
 			}
 		}

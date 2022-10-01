@@ -85,6 +85,24 @@ $trans-set: 0.5s ease;
 		#{$property}: calc(#{$minSize + px} + #{$addSize} * ((100vw - 320px) / (1600 - 320)));
 	}
 }
+@mixin go-adaptive640($property, $startSize, $minSize) {
+	$addSize: $startSize - $minSize;
+	@media (max-width: 640px) {
+		#{$property}: calc(#{$minSize + px} + #{$addSize} * ((100vw - 320px) / (640 - 320)));
+	}
+}
+@mixin go-adaptive1350($property, $startSize, $minSize) {
+	$addSize: $startSize - $minSize;
+	@media (max-width: 1350px) {
+		#{$property}: calc(#{$minSize + px} + #{$addSize} * ((100vw - 1000px) / (1350 - 1000)));
+	}
+}
+@mixin go-adaptive900($property, $startSize, $minSize) {
+	$addSize: $startSize - $minSize;
+	@media (max-width: 900px) {
+		#{$property}: calc(#{$minSize + px} + #{$addSize} * ((100vw - 640px) / (900 - 640)));
+	}
+}
 
 %logo {
 	width: 82px;
@@ -95,6 +113,11 @@ $trans-set: 0.5s ease;
 	display: flex;
 	align-items: center;
 	position: relative;
+	@media (max-width: 600px) {
+		border: none;
+		width: 128px;
+		height: 23px;
+	}
 
 	.title__text {
 		&::before {
@@ -106,6 +129,12 @@ $trans-set: 0.5s ease;
 			left: 13%;
 			display: block;
 			background: url('../../assets/icons/bamboo.png') no-repeat;
+			@media (max-width: 600px) {
+				width: 15px;
+				height: 21px;
+				left: 72px;
+				top: -3px;
+			}
 		}
 		.text {
 			@include text-19-400;
@@ -170,7 +199,7 @@ $trans-set: 0.5s ease;
 		transition: $trans-set;
 	}
 	.gradient img {
-		@media (max-width: 1000px) {
+		@media (max-width: 1350px) {
 			width: 100%;
 		}
 		
@@ -197,7 +226,7 @@ $trans-set: 0.5s ease;
 			line-height: 140%;
 			grid-row: 1/2;
 			grid-column: 1/2;
-			@media (max-width: 640px) {
+			@media (max-width: 999px) {
 				font-weight: 500;
 				font-size: 12px;
 				position: relative;
@@ -208,7 +237,7 @@ $trans-set: 0.5s ease;
 			grid-row: 1/3;
 			grid-column: 2/3;
 			align-self: center;
-			@media (max-width: 640px) {
+			@media (max-width: 999px) {
 				width: 26px;
 				height: 28px;
 				position: relative;
@@ -223,7 +252,7 @@ $trans-set: 0.5s ease;
 			line-height: 120%;
 			grid-row: 2/3;
 			grid-column: 1/2;
-			@media (max-width: 640px) {
+			@media (max-width: 999px) {
 				font-size: 12px;
 				position: relative;
 				left: -5px;
@@ -239,10 +268,7 @@ $trans-set: 0.5s ease;
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	// @media (max-width: 640px) {
-	// 	width: 168px;
-	// 	height: 168px;
-	// }
+
 	.contain {
 		background-color: #FFFFFF;
 		width: 98%;
@@ -269,8 +295,9 @@ $trans-set: 0.5s ease;
 		left: 5px;
 		gap: none;
 	}
-	@media (max-width: 640px) {
-		width: 95%;
+	@include go-adaptive900('width', 860, 608);
+	@include go-adaptive640('width', 608, 300);
+	@media (max-width: 900px) {
 		height: 109px;
 		gap: none;
 		padding: 13px 15px 13px 12px;
