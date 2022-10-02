@@ -9,7 +9,19 @@
 	@media (max-width: 1000px) {
 		background: url("../../assets/images/panda_bg1000px.jpg") center center/100% no-repeat;
 		width: 100%;
-		padding-top: 390px;
+		padding-top: 39%;
+	}
+	@media (max-width: 640px) {
+		background: url("../../assets/images/panda_bg640px.jpg") center center/100% no-repeat;
+		width: 100%;
+		padding-top: 52.34%;
+		position: relative;
+		top: 34px;
+	}
+	@media (max-width: 320px) {
+		background: url("../../assets/images/panda_bg320px.jpg") center center/100% no-repeat;
+		width: 100%;
+		padding-top: 58.43%;
 	}
 }
 .wrapper {
@@ -27,6 +39,15 @@
 		max-width: 940px;
 		left: 0;
 	}
+	@media (max-width: 860px) {
+		max-width: 600px;
+		left: 0;
+		padding-top: 25px;
+		padding-bottom: 46px;
+	}
+	@media (max-width: 580px) {
+		max-width: 300px;
+	}
 	.article {
 		width: 100%;
 		.title {
@@ -34,14 +55,23 @@
 			font-size: 36px;
 			line-height: 130%;
 			color: #FFFFFF;
-			@include go-adaptive1600('width', 1160, 780)
+			@include go-adaptive1600('width', 1160, 780);
+			@media (max-width: 860px) {
+				width: 100%;
+				font-size: 24px;
+				line-height: 120%;
+			}
 		}
 		.text {
 			@include go-adaptive1600('margin-top', 10, 30);
 			@include text-16-500;
 			line-height: 140%;
 			color: #FFFFFF;
-			@include go-adaptive1600('width', 1160, 940)
+			@include go-adaptive1600('width', 1160, 940);
+			@media (max-width: 860px) {
+				width: 100%;
+				margin-top: 20px;
+			}
 		}
 	}
 	.sub-title {
@@ -52,6 +82,15 @@
 		align-self: start;
 		margin: 44px 0 60px 0;
 		@include go-adaptive1600('margin-bottom', 60, 40);
+		@media (max-width: 860px) {
+			margin-top: 30px;
+		}
+		@media (max-width: 580px) {
+			margin-top: 25px;
+			margin-bottom: 30px;
+			font-size: 24px;
+			line-height: 120%;
+		}
 	}
 	.feed-friend {
 		width: 100%;
@@ -66,6 +105,9 @@
 		@include go-adaptive1600('padding-left', 92, 44);
 		@include go-adaptive1600('padding-bottom', 62, 46);
 		@include go-adaptive1600('padding-right', 92, 44);
+		@media (max-width: 860px) {
+			padding-bottom: 30px;
+		}
 		.title {
 			@include text-19-400;
 			font-size: 48px;
@@ -73,7 +115,10 @@
 			color: $color-orange;
 			position: relative;
 			left: -5px;
-
+			@media (max-width: 860px) {
+				margin-top: 20px;
+				left: 0;
+			}
 		}
 		.text {
 			align-self: start;
@@ -84,6 +129,12 @@
 			font-size: 24px;
 			line-height: 120%;
 			color: $text-color;
+			@media (max-width: 860px) {
+				margin-top: 20px;
+				margin-bottom: 97px;
+				text-align: center;
+
+			}
 		}
 		.scheme {
 			width: 520px;
@@ -128,12 +179,22 @@
 			@media (max-width: 1200px) {
 				padding-left: 20px;
 			}
+			@media (max-width: 860px) {
+				padding-left: 0;
+				position: relative;
+				top: -6px;
+				left: -4px;
+				margin-bottom: 0;
+			}
 		}
 	}
 	.money-slider {
 		width: 100%;
 		@media (max-width: 1200px) {
 			width: 810px;
+		}
+		@media (max-width: 860px) {
+			width: 105.5%;
 		}
 		.field {
 			width: 100%;
@@ -152,6 +213,10 @@
 					width: 785px;
 					left: 12px;
 				}
+				@media (max-width: 860px) {
+					width: 87.33%;
+					left: 6.5%;
+				}
 			}
 			.dot {
 				width: 10px;
@@ -165,11 +230,17 @@
 					@media (max-width: 1200px) {
 						left: 11px;
 					}
+					@media (max-width: 860px) {
+						left: 5.83%;
+					}
 				}
 				&:nth-child(3) {
 					left: 156px;
 					@media (max-width: 1200px) {
 						left: 141px;
+					}
+					@media (max-width: 860px) {
+						left: 27.5%;
 					}
 				}
 				&:nth-child(4) {
@@ -177,11 +248,17 @@
 					@media (max-width: 1200px) {
 						left: 271px;
 					}
+					@media (max-width: 860px) {
+						left: 49.17%;
+					}
 				}
 				&:nth-child(5) {
 					left: 416px;
 					@media (max-width: 1200px) {
 						left: 401px;
+					}
+					@media (max-width: 860px) {
+						left: 70.83%;
 					}
 				}
 				&:nth-child(6) {
@@ -189,17 +266,26 @@
 					@media (max-width: 1200px) {
 						left: 531px;
 					}
+					@media (max-width: 860px) {
+						left: 92.5%;
+					}
 				}
 				&:nth-child(7) {
 					left: 676px;
 					@media (max-width: 1200px) {
 						left: 661px;
 					}
+					@media (max-width: 860px) {
+						display: none;
+					}
 				}
 				&:nth-child(8) {
 					left: 806px;
 					@media (max-width: 1200px) {
 						left: 791px;
+					}
+					@media (max-width: 860px) {
+						display: none;
 					}
 				}
 				&:nth-child(9) {
@@ -236,6 +322,10 @@
 					width: 950px;
 					left: -4px;
 				}
+				@media (max-width: 860px) {
+					width: 158.3333%;
+					left: 3.333%;
+				}
 				&::-webkit-slider-thumb {
 					appearance: none;
 					width: 40px;
@@ -265,11 +355,23 @@
 						display: none;
 					}
 				}
+				@media (max-width: 860px) {
+					&:nth-child(2),
+					&:nth-child(3) {
+						display: none;
+					}
+				}
 				&:nth-child(4) {
 					margin-right: 77px;
+					@media (max-width: 860px) {
+						margin-left: 3%;
+					}
 				}
 				&:nth-child(5) {
 					margin-right: 77px;
+					@media (max-width: 860px) {
+						margin-right: 12%;
+					}
 				}
 				&:nth-child(6) {
 					margin-right: 77px;
@@ -294,10 +396,6 @@
 		.another-money {
 			margin: 45px 0 20px 0;
 			padding: 16px 9px;
-			@media (max-width: 1200px) {
-				margin: 50px 0 26px 0;
-				padding: 12px 5px;
-			}
 			width: 268px;
 			@include text-19-400;
 			font-size: 16px;
@@ -306,6 +404,16 @@
 			border: 2px solid #929699;
 			border-radius: 2px;
 			background: transparent;
+			@media (max-width: 1200px) {
+				margin: 50px 0 26px 0;
+				padding: 12px 5px;
+			}
+			@media (max-width: 860px) {
+				width: 180px;
+				height: 42px;
+				margin: 26.5% 0 17% 0;
+				padding: 10px 5px 10px 5px;
+			}
 			&::placeholder {
 				color: #929699;
 			}
@@ -337,6 +445,9 @@
 			bottom: 60px;
 			right: 10px;
 			color: #929699;
+			@media (max-width: 860px) {
+				bottom: 55px;
+			}
 		}
 	}
 	.radios {
@@ -402,7 +513,7 @@
 .footer {
 	padding-top: 5px;
 }
-@media (max-width: 1200px) {
+@media (max-width: 1200px) and (min-width: 861px) {
 		.footer {
 		padding: 2px 35px 0 10px;
 		.container {
@@ -417,6 +528,41 @@
 						position: relative;
 						left: 15px;
 					}
+				}
+			}
+		}
+	}
+}
+@media (max-width: 860px) and (min-width: 630px) {
+	.footer {
+		position: relative;
+		top: 0;
+		padding: 0 0 0 20px;
+		.container {
+			padding-bottom: 0;
+			.row1 {
+				.title {
+					position: relative;
+					top: -25px;
+				}
+			}
+			.row2 {
+				position: relative;
+				top: -25px;
+			}
+			.row3 {
+				.menu {
+					.menu__list{
+
+						position: relative;
+						top: -25px;
+						left: -5px;
+					}
+				}
+				.about {
+					position: relative;
+						top: -23px;
+						left: -10px;
 				}
 			}
 		}
