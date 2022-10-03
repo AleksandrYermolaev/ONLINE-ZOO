@@ -47,6 +47,7 @@
 	}
 	@media (max-width: 580px) {
 		max-width: 300px;
+		padding-bottom: 24px;
 	}
 	.article {
 		width: 100%;
@@ -108,6 +109,9 @@
 		@media (max-width: 860px) {
 			padding-bottom: 30px;
 		}
+		@media (max-width: 580px) {
+			padding-bottom: 17px;
+		}
 		.title {
 			@include text-19-400;
 			font-size: 48px;
@@ -116,6 +120,11 @@
 			position: relative;
 			left: -5px;
 			@media (max-width: 860px) {
+				margin-top: 20px;
+				left: 0;
+			}
+			@media (max-width: 580px) {
+				font-size: 24px;
 				margin-top: 20px;
 				left: 0;
 			}
@@ -133,7 +142,13 @@
 				margin-top: 20px;
 				margin-bottom: 97px;
 				text-align: center;
-
+			}
+			@media (max-width: 580px) {
+				font-size: 16px;
+				line-height: 140%;
+				margin-top: 10px;
+				margin-bottom: 32px;
+				text-align: center;
 			}
 		}
 		.scheme {
@@ -141,11 +156,18 @@
 			display: flex;
 			position: relative;
 			left: -16px;
+			@media (max-width: 580px) {
+				width: 300px;
+				left: 0;
+			}
 			.amount {
 				flex: 0 0 165px;
 				display: flex;
 				flex-direction: column;
 				justify-content: center;
+				@media (max-width: 580px) {
+					flex: 0 0 90px;
+				}
 				.number {
 					margin-top: 20px;
 					@include text-16-500;
@@ -153,6 +175,9 @@
 					line-height: 80%;
 					text-align: center;
 					color: black;
+					@media (max-width: 580px) {
+						font-size: 40px;
+					}
 				}
 				.text {
 					margin: 11px 0 0 0;
@@ -161,13 +186,33 @@
 					line-height: 140%;
 					text-align: center;
 					color: $text-color;
+					@media (max-width: 580px) {
+						font-size: 9px;
+						position: relative;
+						top: -5px;
+					}
 				}
 			}
 			.cross {
 				display: flex;
 				align-items: center;
-				margin: -16px 64px 0 11px;
+				margin: -6px 64px 0 5px;
+				@media (max-width: 580px) {
+
+					img {
+						width: 8px;
+						height: 8px;
+					}
+					& + img {
+						position: relative;
+						left: -25px;
+						top: 5px;
+						width: 161px;
+						height: 112px;
+					}
+				}
 			}
+
 		}
 		.text-small {
 			align-self: start;
@@ -186,6 +231,10 @@
 				left: -4px;
 				margin-bottom: 0;
 			}
+			@media (max-width: 580px) {
+				margin-top: 15px;
+				left: 0;
+			}
 		}
 	}
 	.money-slider {
@@ -196,12 +245,18 @@
 		@media (max-width: 860px) {
 			width: 105.5%;
 		}
+		@media (max-width: 580px) {
+			width: 100%;
+		}
 		.field {
 			width: 100%;
 			height: 27px;
 			background: #404950;
 			border-radius: 2px;
 			position: relative;
+			@media (max-width: 580px) {
+				height: 13.5px;
+			}
 			.line {
 				width: 93.75%;
 				height: 2px;
@@ -217,6 +272,9 @@
 					width: 87.33%;
 					left: 6.5%;
 				}
+				@media (max-width: 580px) {
+					top: 6px;
+				}
 			}
 			.dot {
 				width: 10px;
@@ -225,6 +283,11 @@
 				background: $color-yellow;
 				position: absolute;
 				top: 8px;
+				@media (max-width: 580px) {
+					width: 5px;
+					height: 5px;
+					top: 4px;
+				}
 				&:nth-child(2) {
 					left: 26px;
 					@media (max-width: 1200px) {
@@ -326,11 +389,22 @@
 					width: 158.3333%;
 					left: 3.333%;
 				}
+				@media (max-width: 580px) {
+					width: 498px;
+					left: 8px;
+				}
+				
 				&::-webkit-slider-thumb {
 					appearance: none;
 					width: 40px;
 					height: 40px;
-					background: url("../../assets/icons/roller_icon.svg")
+					background: url("../../assets/icons/roller_icon.svg");
+					@media (max-width: 580px) {
+						width: 40px;
+						height: 40px;
+						background: url("../../assets/icons/roller_icon320.svg") no-repeat;
+						background-position: 0 3px;
+					}
 				}
 			}
 		}
@@ -338,6 +412,9 @@
 			width: 100%;
 			margin-top: 12px;
 			display: flex;
+			@media (max-width: 580px) {
+				margin-top: 6px;
+			}
 			.sum {
 				@include text-16-500;
 				font-size: 26px;
@@ -345,10 +422,16 @@
 				color: $text-color;
 				margin-right: 58px;
 				cursor: pointer;
+				@media (max-width: 580px) {
+					font-size: 13px;
+				}
 				span {
 					font-size: 20px;
 					position: relative;
 					top: -1.5px;
+					@media (max-width: 580px) {
+						font-size: 10px;
+					}
 				}
 				@media (max-width: 1200px) {
 					&:nth-child(1) {
@@ -366,6 +449,9 @@
 					@media (max-width: 860px) {
 						margin-left: 3%;
 					}
+					@media (max-width: 580px) {
+						margin-right: 37px;
+					}
 				}
 				&:nth-child(5) {
 					margin-right: 77px;
@@ -378,9 +464,15 @@
 					@media (max-width: 1200px) {
 						margin-right: 74px;
 					}
+					@media (max-width: 580px) {
+						margin-right: 37px;
+					}
 				}
 				&:nth-child(7) {
 					margin-right: 90px;
+					@media (max-width: 580px) {
+						margin-right: 45px;
+					}
 				}
 				&:nth-child(8) {
 					margin-right: 0;
@@ -413,6 +505,9 @@
 				height: 42px;
 				margin: 26.5% 0 17% 0;
 				padding: 10px 5px 10px 5px;
+			}
+			@media (max-width: 580px) {
+				margin: 24px 0 26px 0;
 			}
 			&::placeholder {
 				color: #929699;
@@ -486,6 +581,9 @@
 	.button {
 		margin-top: 30px;
 		@include btn-orange;
+		@media (max-width: 580px) {
+			margin-top: 26px;
+		}
 		&::after {
 			content: "Feed a friend now";
 			@include text-16-500;
@@ -508,6 +606,9 @@
 		font-weight: 400;
 		line-height: 140%;
 		color: $text-color;
+		@media (max-width: 580px) {
+			width: 301px;
+		}
 	}
 }
 .footer {
@@ -563,6 +664,36 @@
 					position: relative;
 						top: -23px;
 						left: -10px;
+				}
+			}
+		}
+	}
+}
+@media (max-width: 580px) {
+	.footer {
+		position: relative;
+		top: 0;
+		.container {
+			.row1 {
+				position: relative;
+				top: -22px;
+			}
+			.row2 {
+				position: relative;
+				top: -22px;
+			}
+			.row3 {
+				.social__list {
+					top: 56px;
+					left: 60px;
+				}
+				.menu__list {
+					position: relative;
+					top: -24px;
+					left: -10px;
+				}
+				.about {
+					top: 207px;
 				}
 			}
 		}
