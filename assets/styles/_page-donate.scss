@@ -1,21 +1,54 @@
 .main {
 	background: $background-pink;
+	overflow: hidden;
 }
 .background {
 	background: url("../../assets/images/panda_bg.jpg") center center/100% no-repeat;
 	width: 100%;
 	padding-top: 24.375%;
+	@media (max-width: 1000px) {
+		background: url("../../assets/images/panda_bg1000px.jpg") center center/100% no-repeat;
+		width: 100%;
+		padding-top: 39%;
+	}
+	@media (max-width: 640px) {
+		background: url("../../assets/images/panda_bg640px.jpg") center center/100% no-repeat;
+		width: 100%;
+		padding-top: 52.34%;
+		position: relative;
+		top: 34px;
+	}
+	@media (max-width: 320px) {
+		background: url("../../assets/images/panda_bg320px.jpg") center center/100% no-repeat;
+		width: 100%;
+		padding-top: 58.43%;
+	}
 }
 .wrapper {
 	width: 100%;
 	max-width: 1160px;
 	margin: 40px auto 0px;
 	padding-bottom: 178px;
+	@include go-adaptive1600('padding-bottom', 178, 30);
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 	position: relative;
-	left: 10px;
+	//left: 10px;
+	@media (max-width: 1200px) {
+		max-width: 940px;
+		left: 0;
+	}
+	@media (max-width: 860px) {
+		max-width: 600px;
+		left: 0;
+		padding-top: 25px;
+		padding-bottom: 46px;
+	}
+	@media (max-width: 580px) {
+		max-width: 300px;
+		padding-bottom: 24px;
+	}
 	.article {
 		width: 100%;
 		.title {
@@ -23,12 +56,23 @@
 			font-size: 36px;
 			line-height: 130%;
 			color: #FFFFFF;
+			@include go-adaptive1600('width', 1160, 780);
+			@media (max-width: 860px) {
+				width: 100%;
+				font-size: 24px;
+				line-height: 120%;
+			}
 		}
 		.text {
-			margin-top: 10px;
+			@include go-adaptive1600('margin-top', 10, 30);
 			@include text-16-500;
 			line-height: 140%;
 			color: #FFFFFF;
+			@include go-adaptive1600('width', 1160, 940);
+			@media (max-width: 860px) {
+				width: 100%;
+				margin-top: 20px;
+			}
 		}
 	}
 	.sub-title {
@@ -38,6 +82,16 @@
 		color: $color-orange;
 		align-self: start;
 		margin: 44px 0 60px 0;
+		@include go-adaptive1600('margin-bottom', 60, 40);
+		@media (max-width: 860px) {
+			margin-top: 30px;
+		}
+		@media (max-width: 580px) {
+			margin-top: 25px;
+			margin-bottom: 30px;
+			font-size: 24px;
+			line-height: 120%;
+		}
 	}
 	.feed-friend {
 		width: 100%;
@@ -48,6 +102,16 @@
 		display: flex;
 		flex-direction: column;
 		align-items: center;
+		@include go-adaptive1600('padding-top', 40, 20);
+		@include go-adaptive1600('padding-left', 92, 44);
+		@include go-adaptive1600('padding-bottom', 62, 46);
+		@include go-adaptive1600('padding-right', 92, 44);
+		@media (max-width: 860px) {
+			padding-bottom: 30px;
+		}
+		@media (max-width: 580px) {
+			padding-bottom: 17px;
+		}
 		.title {
 			@include text-19-400;
 			font-size: 48px;
@@ -55,25 +119,55 @@
 			color: $color-orange;
 			position: relative;
 			left: -5px;
+			@media (max-width: 860px) {
+				margin-top: 20px;
+				left: 0;
+			}
+			@media (max-width: 580px) {
+				font-size: 24px;
+				margin-top: 20px;
+				left: 0;
+			}
 		}
 		.text {
 			align-self: start;
 			margin: 20px 0 107px;
+			@include go-adaptive1600('margin-top', 20, 10);
+			@include go-adaptive1600('margin-bottom', 107, 107);
 			@include text-19-400;
 			font-size: 24px;
 			line-height: 120%;
 			color: $text-color;
+			@media (max-width: 860px) {
+				margin-top: 20px;
+				margin-bottom: 97px;
+				text-align: center;
+			}
+			@media (max-width: 580px) {
+				font-size: 16px;
+				line-height: 140%;
+				margin-top: 10px;
+				margin-bottom: 32px;
+				text-align: center;
+			}
 		}
 		.scheme {
 			width: 520px;
 			display: flex;
 			position: relative;
 			left: -16px;
+			@media (max-width: 580px) {
+				width: 300px;
+				left: 0;
+			}
 			.amount {
 				flex: 0 0 165px;
 				display: flex;
 				flex-direction: column;
 				justify-content: center;
+				@media (max-width: 580px) {
+					flex: 0 0 90px;
+				}
 				.number {
 					margin-top: 20px;
 					@include text-16-500;
@@ -81,6 +175,9 @@
 					line-height: 80%;
 					text-align: center;
 					color: black;
+					@media (max-width: 580px) {
+						font-size: 40px;
+					}
 				}
 				.text {
 					margin: 11px 0 0 0;
@@ -89,13 +186,33 @@
 					line-height: 140%;
 					text-align: center;
 					color: $text-color;
+					@media (max-width: 580px) {
+						font-size: 9px;
+						position: relative;
+						top: -5px;
+					}
 				}
 			}
 			.cross {
 				display: flex;
 				align-items: center;
-				margin: -16px 64px 0 11px;
+				margin: -6px 64px 0 5px;
+				@media (max-width: 580px) {
+
+					img {
+						width: 8px;
+						height: 8px;
+					}
+					& + img {
+						position: relative;
+						left: -25px;
+						top: 5px;
+						width: 161px;
+						height: 112px;
+					}
+				}
 			}
+
 		}
 		.text-small {
 			align-self: start;
@@ -104,16 +221,42 @@
 			font-size: 16px;
 			line-height: 140%;
 			color: black;
+			@media (max-width: 1200px) {
+				padding-left: 20px;
+			}
+			@media (max-width: 860px) {
+				padding-left: 0;
+				position: relative;
+				top: -6px;
+				left: -4px;
+				margin-bottom: 0;
+			}
+			@media (max-width: 580px) {
+				margin-top: 15px;
+				left: 0;
+			}
 		}
 	}
 	.money-slider {
 		width: 100%;
+		@media (max-width: 1200px) {
+			width: 810px;
+		}
+		@media (max-width: 860px) {
+			width: 105.5%;
+		}
+		@media (max-width: 580px) {
+			width: 100%;
+		}
 		.field {
 			width: 100%;
 			height: 27px;
 			background: #404950;
 			border-radius: 2px;
 			position: relative;
+			@media (max-width: 580px) {
+				height: 13.5px;
+			}
 			.line {
 				width: 93.75%;
 				height: 2px;
@@ -121,6 +264,17 @@
 				position: absolute;
 				left: 31px;
 				top: 12px;
+				@media (max-width: 1200px) {
+					width: 785px;
+					left: 12px;
+				}
+				@media (max-width: 860px) {
+					width: 87.33%;
+					left: 6.5%;
+				}
+				@media (max-width: 580px) {
+					top: 6px;
+				}
 			}
 			.dot {
 				width: 10px;
@@ -129,29 +283,79 @@
 				background: $color-yellow;
 				position: absolute;
 				top: 8px;
+				@media (max-width: 580px) {
+					width: 5px;
+					height: 5px;
+					top: 4px;
+				}
 				&:nth-child(2) {
 					left: 26px;
+					@media (max-width: 1200px) {
+						left: 11px;
+					}
+					@media (max-width: 860px) {
+						left: 5.83%;
+					}
 				}
 				&:nth-child(3) {
 					left: 156px;
+					@media (max-width: 1200px) {
+						left: 141px;
+					}
+					@media (max-width: 860px) {
+						left: 27.5%;
+					}
 				}
 				&:nth-child(4) {
 					left: 286px;
+					@media (max-width: 1200px) {
+						left: 271px;
+					}
+					@media (max-width: 860px) {
+						left: 49.17%;
+					}
 				}
 				&:nth-child(5) {
 					left: 416px;
+					@media (max-width: 1200px) {
+						left: 401px;
+					}
+					@media (max-width: 860px) {
+						left: 70.83%;
+					}
 				}
 				&:nth-child(6) {
 					left: 546px;
+					@media (max-width: 1200px) {
+						left: 531px;
+					}
+					@media (max-width: 860px) {
+						left: 92.5%;
+					}
 				}
 				&:nth-child(7) {
 					left: 676px;
+					@media (max-width: 1200px) {
+						left: 661px;
+					}
+					@media (max-width: 860px) {
+						display: none;
+					}
 				}
 				&:nth-child(8) {
 					left: 806px;
+					@media (max-width: 1200px) {
+						left: 791px;
+					}
+					@media (max-width: 860px) {
+						display: none;
+					}
 				}
 				&:nth-child(9) {
 					left: 936px;
+					@media (max-width: 1200px) {
+						display: none;
+					}
 				}
 				&::after {
 					content: "";
@@ -177,13 +381,30 @@
 				top: -7px;
 				appearance: none;
 				background: transparent;
+				@media (max-width: 1200px) {
+					width: 950px;
+					left: -4px;
+				}
+				@media (max-width: 860px) {
+					width: 158.3333%;
+					left: 3.333%;
+				}
+				@media (max-width: 580px) {
+					width: 498px;
+					left: 8px;
+				}
 				
 				&::-webkit-slider-thumb {
-					
 					appearance: none;
 					width: 40px;
 					height: 40px;
-					background: url("../../assets/icons/roller_icon.svg")
+					background: url("../../assets/icons/roller_icon.svg");
+					@media (max-width: 580px) {
+						width: 40px;
+						height: 40px;
+						background: url("../../assets/icons/roller_icon320.svg") no-repeat;
+						background-position: 0 3px;
+					}
 				}
 			}
 		}
@@ -191,6 +412,9 @@
 			width: 100%;
 			margin-top: 12px;
 			display: flex;
+			@media (max-width: 580px) {
+				margin-top: 6px;
+			}
 			.sum {
 				@include text-16-500;
 				font-size: 26px;
@@ -198,22 +422,57 @@
 				color: $text-color;
 				margin-right: 58px;
 				cursor: pointer;
+				@media (max-width: 580px) {
+					font-size: 13px;
+				}
 				span {
 					font-size: 20px;
 					position: relative;
 					top: -1.5px;
+					@media (max-width: 580px) {
+						font-size: 10px;
+					}
+				}
+				@media (max-width: 1200px) {
+					&:nth-child(1) {
+						display: none;
+					}
+				}
+				@media (max-width: 860px) {
+					&:nth-child(2),
+					&:nth-child(3) {
+						display: none;
+					}
 				}
 				&:nth-child(4) {
 					margin-right: 77px;
+					@media (max-width: 860px) {
+						margin-left: 3%;
+					}
+					@media (max-width: 580px) {
+						margin-right: 37px;
+					}
 				}
 				&:nth-child(5) {
 					margin-right: 77px;
+					@media (max-width: 860px) {
+						margin-right: 12%;
+					}
 				}
 				&:nth-child(6) {
 					margin-right: 77px;
+					@media (max-width: 1200px) {
+						margin-right: 74px;
+					}
+					@media (max-width: 580px) {
+						margin-right: 37px;
+					}
 				}
 				&:nth-child(7) {
 					margin-right: 90px;
+					@media (max-width: 580px) {
+						margin-right: 45px;
+					}
 				}
 				&:nth-child(8) {
 					margin-right: 0;
@@ -227,7 +486,7 @@
 	.amount-container {
 		position: relative;
 		.another-money {
-			margin: 50px 0 20px 0;
+			margin: 45px 0 20px 0;
 			padding: 16px 9px;
 			width: 268px;
 			@include text-19-400;
@@ -237,6 +496,19 @@
 			border: 2px solid #929699;
 			border-radius: 2px;
 			background: transparent;
+			@media (max-width: 1200px) {
+				margin: 50px 0 26px 0;
+				padding: 12px 5px;
+			}
+			@media (max-width: 860px) {
+				width: 180px;
+				height: 42px;
+				margin: 26.5% 0 17% 0;
+				padding: 10px 5px 10px 5px;
+			}
+			@media (max-width: 580px) {
+				margin: 24px 0 26px 0;
+			}
 			&::placeholder {
 				color: #929699;
 			}
@@ -268,6 +540,9 @@
 			bottom: 60px;
 			right: 10px;
 			color: #929699;
+			@media (max-width: 860px) {
+				bottom: 55px;
+			}
 		}
 	}
 	.radios {
@@ -306,6 +581,9 @@
 	.button {
 		margin-top: 30px;
 		@include btn-orange;
+		@media (max-width: 580px) {
+			margin-top: 26px;
+		}
 		&::after {
 			content: "Feed a friend now";
 			@include text-16-500;
@@ -328,5 +606,96 @@
 		font-weight: 400;
 		line-height: 140%;
 		color: $text-color;
+		@media (max-width: 580px) {
+			width: 301px;
+		}
+	}
+}
+.footer {
+	padding-top: 5px;
+}
+@media (max-width: 1200px) and (min-width: 861px) {
+		.footer {
+		padding: 2px 35px 0 10px;
+		.container {
+			.row2 {
+				position: relative;
+				top: 5px;
+			}
+			.row3 {
+				.menu {
+					.menu__list{
+
+						position: relative;
+						left: 15px;
+					}
+				}
+			}
+		}
+	}
+}
+@media (max-width: 860px) and (min-width: 630px) {
+	.footer {
+		position: relative;
+		top: 0;
+		padding: 0 0 0 20px;
+		.container {
+			padding-bottom: 0;
+			.row1 {
+				.title {
+					position: relative;
+					top: -25px;
+				}
+			}
+			.row2 {
+				position: relative;
+				top: -25px;
+			}
+			.row3 {
+				.menu {
+					.menu__list{
+
+						position: relative;
+						top: -25px;
+						left: -5px;
+					}
+				}
+				.about {
+					position: relative;
+						top: -23px;
+						left: -10px;
+				}
+			}
+		}
+	}
+}
+@media (max-width: 580px) {
+	.footer {
+		position: relative;
+		top: 0;
+		.container {
+			.row1 {
+				position: relative;
+				top: -22px;
+			}
+			.row2 {
+				position: relative;
+				top: -22px;
+			}
+			.row3 {
+				.social__list {
+					top: 56px;
+					left: 60px;
+				}
+				.menu__list {
+					position: relative;
+					top: -24px;
+					left: -10px;
+				}
+				.about {
+					top: 207px;
+				}
+			}
+		}
 	}
 }

@@ -1,5 +1,10 @@
 .main {
 	overflow: hidden;
+	
+	@media (max-width: 640px) {
+		position: relative;
+		top: 34px;
+	}
 }
 .top {
 	width: 100%;
