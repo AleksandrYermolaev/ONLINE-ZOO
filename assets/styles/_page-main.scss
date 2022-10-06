@@ -818,7 +818,10 @@
 		display: flex;
 		flex-direction: column;
 		align-items: center;
-	
+		overflow: hidden;
+		@media (max-width: 1150px) {
+			width: 900px;
+		}
 		.header {
 			@include text-19-400;
 			font-size: 36px;
@@ -832,12 +835,18 @@
 		}
 		.cards {
 			margin: 4.3% 0 1.724% 0;
-			width: 100%;
+			//width: 100%;
 			display: flex;
-			gap: 30px;
-			@media (max-width: 1100px) {
-				margin: 3% 0 1.724% 35px;
+			gap: 20px;
+			align-self: start;
+			transition: $trans-set;
+			//transform: translateX(-287px);
+			@media (max-width: 1150px) {
+				gap: 30px;
 			}
+			// @media (max-width: 1100px) {
+			// 	margin: 3% 0 1.724% 35px;
+			// }
 			@media (max-width: 900px) {
 				flex-direction: column;
 				margin: 5% 0 0 22px;
@@ -869,6 +878,7 @@
 			background: $color-lightgray;
 			position: relative;
 			border-radius: 5px;
+			margin-bottom: 10px;
 			@media (max-width: 1150px) {
 				width: 390px;
 				top: 3px;
@@ -910,42 +920,44 @@
 				}
 			}
 		}
-		.button {
-			align-self: start;
-			@include btn-orange;
-			margin-top: 2.67%;
+	}
+	.button {
+		align-self: start;
+		position: relative;
+		left: 8%;
+		@include btn-orange;
+		margin-top: 2.67%;
+		border-radius: 5px;
+		@media (max-width: 1150px) {
+			position: relative;
+			top: 28px;
+			left: 24px;
+		}
+		@include go-adaptive640('left', 190, 28);
+		@media (max-width: 640px) {
+			position: relative;
+			top: 23px;
+			width: 240px;
+		}
+		@media (width: 320px) {
+			position: relative;
+			top: 21px;
+			width: 240px;
+		}
+		&::after {
+			content: 'leave feedback';
+			@include text-16-500;
+			line-height: 55px;
 			border-radius: 5px;
-			@media (max-width: 1150px) {
-				position: relative;
-				top: 28px;
-				left: 24px;
-			}
-			@include go-adaptive640('left', 190, 28);
-			@media (max-width: 640px) {
-				position: relative;
-				top: 23px;
-				width: 240px;
-			}
-			@media (width: 320px) {
-				position: relative;
-				top: 21px;
-				width: 240px;
-			}
-			&::after {
-				content: 'leave feedback';
-				@include text-16-500;
-				line-height: 55px;
-				border-radius: 5px;
-				display: block;
-				position: absolute;
-				width: 100%;
-				height: 100%;
-				top: 0;
-				left: 0;
-				background: $btn-orange;
-				opacity: 0;
-				transition: $trans-set;
-			}
+			display: block;
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			top: 0;
+			left: 0;
+			background: $btn-orange;
+			opacity: 0;
+			transition: $trans-set;
 		}
 	}
 }
@@ -1674,9 +1686,9 @@
 			}
 			.cards {
 				margin: 4.3% 0 1.724% 0;
-				width: 100%;
+				//width: 100%;
 				display: flex;
-				gap: 30px;
+				gap: 20px;
 				@media (max-width: 1100px) {
 					margin: 3% 0 1.724% 35px;
 				}

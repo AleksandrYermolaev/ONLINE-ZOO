@@ -1,0 +1,44 @@
+$position1600: -288px;
+$position1000: -297px;
+.class2 {
+	transform: translateX($position1600);
+}
+.class3 {
+	transform: translateX($position1600 * 2);
+}
+.class4 {
+	transform: translateX($position1600 * 3);
+}
+.class5 {
+	transform: translateX($position1600 * 4);
+}
+.class6 {
+	transform: translateX($position1600 * 5);
+}
+.class7 {
+	transform: translateX($position1600 * 6);
+}
+.class8 {
+	transform: translateX($position1600 * 7);
+}
+.class-1000-2 {
+	transform: translateX($position1000);
+}
+.class-1000-3 {
+	transform: translateX($position1000 * 2);
+}
+.class-1000-4 {
+	transform: translateX($position1000 * 3);
+}
+.class-1000-5 {
+	transform: translateX($position1000 * 4);
+}
+.class-1000-6 {
+	transform: translateX($position1000 * 5);
+}
+.class-1000-7 {
+	transform: translateX($position1000 * 6);
+}
+.class-1000-8 {
+	transform: translateX($position1000 * 7);
+}
