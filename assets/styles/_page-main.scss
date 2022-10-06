@@ -822,6 +822,9 @@
 		@media (max-width: 1150px) {
 			width: 900px;
 		}
+		@media (max-width: 900px) {
+			padding-left: 0px;
+		}
 		.header {
 			@include text-19-400;
 			font-size: 36px;
@@ -830,6 +833,10 @@
 			@media (max-width: 900px) {
 				position: relative;
 				left: -6px;
+			}
+			@media (max-width: 640px) {
+				position: relative;
+				left: -20%;
 			}
 			@include go-adaptive640('font-size', 36, 24)
 		}
@@ -851,6 +858,7 @@
 				flex-direction: column;
 				margin: 5% 0 0 22px;
 				gap: 15px;
+				height: 360px;
 			}
 			
 			@media (max-width: 350px) {
@@ -869,6 +877,9 @@
 				}
 				@media (max-width: 1150px) and (min-width: 1001px) {
 					margin: 0 auto;
+				}
+				@media (max-width: 900px) {
+					cursor: pointer;
 				}
 			}
 		}

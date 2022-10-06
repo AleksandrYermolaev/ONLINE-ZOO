@@ -12,7 +12,12 @@ const list = document.querySelectorAll('.burger-menu__item a' );
 const burgerText = document.querySelector('.burger-text');
 const cardsBlock = document.querySelector('.cards');
 const input = document.querySelector('.input');
-
+const testimonials = document.querySelectorAll('.card__block');
+const popup = document.querySelector('.popup');
+const popupIn = document.querySelector('.card__popup');
+let text;
+testimonials.forEach(openPopup);
+popup.addEventListener('click', closePopup);
 
 
 buttonFeedFriend.addEventListener('click', goDonate);
@@ -118,5 +123,23 @@ function changeTestimonial() {
 			cardsBlock.classList.remove('class-1000-7');
 			cardsBlock.classList.remove('class-1000-8');
 		}
+	}
+}
+function openPopup(value) {
+	value.addEventListener('click', () => {
+		text = value.innerHTML;
+		popupIn.insertAdjacentHTML('beforeend', text);
+		popup.classList.remove('none');
+		popupIn.querySelector('.card__block-head').classList.add('card__popup-head');
+		popupIn.querySelector('.name').classList.add('popup-name');
+		popupIn.querySelector('.location').classList.add('popup-location');
+		popupIn.querySelector('.card__block-body').classList.add('popup-body');
+		popupIn.querySelectorAll('.text').forEach(value => value.classList.add('popup-text'));
+	})
+}
+function closePopup(event) {
+	if (event.target.classList.contains('popup-background') || event.target.classList.contains('close')) {
+		popup.classList.add('none');
+		popupIn.innerHTML = '';
 	}
 }
