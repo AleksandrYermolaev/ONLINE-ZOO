@@ -1,0 +1,118 @@
+$position1600: -288px;
+$position1000: -297px;
+.class2 {
+	transform: translateX($position1600);
+}
+.class3 {
+	transform: translateX($position1600 * 2);
+}
+.class4 {
+	transform: translateX($position1600 * 3);
+}
+.class5 {
+	transform: translateX($position1600 * 4);
+}
+.class6 {
+	transform: translateX($position1600 * 5);
+}
+.class7 {
+	transform: translateX($position1600 * 6);
+}
+.class8 {
+	transform: translateX($position1600 * 7);
+}
+.class-1000-2 {
+	transform: translateX($position1000);
+}
+.class-1000-3 {
+	transform: translateX($position1000 * 2);
+}
+.class-1000-4 {
+	transform: translateX($position1000 * 3);
+}
+.class-1000-5 {
+	transform: translateX($position1000 * 4);
+}
+.class-1000-6 {
+	transform: translateX($position1000 * 5);
+}
+.class-1000-7 {
+	transform: translateX($position1000 * 6);
+}
+.class-1000-8 {
+	transform: translateX($position1000 * 7);
+}
+.none {
+	opacity: 0;
+	visibility: hidden;
+	pointer-events: none;
+}
+
+.popup {
+	position: fixed;
+	z-index: 5;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	transition: opacity 0.8s ease;
+	.popup-background {
+		width: 100%;
+		height: 100%;
+		background-color: #F5F7F6;
+	}
+	.popup-close {
+		position: absolute;
+		top: 14%;
+		left: calc(50% + 267px/2 + 10px);
+		z-index: 6;
+		cursor: pointer;
+	}
+	.card__popup {
+		position: absolute;
+		z-index: 6;
+		top: 15%;
+		left: calc(50% - 267px/2);
+		width: 267px;
+		height: 391px;
+		padding: 15px 14px 19px 16px;
+		background: $gradient-pink;
+		border-radius: 20px;
+		display: flex;
+		flex-direction: column;
+		gap: 10px;
+		&::before {
+			content: '';
+			position: absolute;
+			z-index: -1;
+			top: 2px;
+			left: 2px;
+			right: 2px;
+			bottom: 2px;
+			border-radius: 20px;
+			background: $color-lightgray;
+		}
+		.card__popup-head {
+			display: flex;
+			gap: 10px;
+			flex-wrap: wrap;
+			height: 37px;
+			.popup-name {
+				@include text-16-500;
+				line-height: 19.2px;
+				color: black;
+				.popup-location {
+					@include text-15-300;
+					color: #BDBDBD;
+				}
+			}
+		}
+		.popup-body {
+			overflow: hidden;
+			.popup-text {
+				@include text-15-300;
+				color: #767474;
+			}
+		}
+	}
+}
