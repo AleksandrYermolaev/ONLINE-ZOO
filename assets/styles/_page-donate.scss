@@ -2,7 +2,7 @@
 	background: $background-pink;
 	overflow: hidden;
 }
-.background {
+.background-img {
 	background: url("../../assets/images/panda_bg.jpg") center center/100% no-repeat;
 	width: 100%;
 	padding-top: 24.375%;
@@ -238,7 +238,8 @@
 		}
 	}
 	.money-slider {
-		width: 100%;
+		
+		//width: 100%;
 		@media (max-width: 1200px) {
 			width: 810px;
 		}
@@ -249,7 +250,7 @@
 			width: 100%;
 		}
 		.field {
-			width: 100%;
+			//width: 100%;
 			height: 27px;
 			background: #404950;
 			border-radius: 2px;
@@ -376,7 +377,7 @@
 			}
 			.pointer {
 				position: absolute;
-				width: 97.4%;
+				width: 950px;
 				left: 11px;
 				top: -7px;
 				appearance: none;

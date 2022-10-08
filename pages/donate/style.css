@@ -1299,20 +1299,20 @@ body.lock {
   overflow: hidden;
 }
 
-.background {
+.background-img {
   background: url("../../assets/images/panda_bg.jpg") center center/100% no-repeat;
   width: 100%;
   padding-top: 24.375%;
 }
 @media (max-width: 1000px) {
-  .background {
+  .background-img {
     background: url("../../assets/images/panda_bg1000px.jpg") center center/100% no-repeat;
     width: 100%;
     padding-top: 39%;
   }
 }
 @media (max-width: 640px) {
-  .background {
+  .background-img {
     background: url("../../assets/images/panda_bg640px.jpg") center center/100% no-repeat;
     width: 100%;
     padding-top: 52.34%;
@@ -1321,7 +1321,7 @@ body.lock {
   }
 }
 @media (max-width: 320px) {
-  .background {
+  .background-img {
     background: url("../../assets/images/panda_bg320px.jpg") center center/100% no-repeat;
     width: 100%;
     padding-top: 58.43%;
@@ -1659,9 +1659,6 @@ body.lock {
     left: 0;
   }
 }
-.wrapper .money-slider {
-  width: 100%;
-}
 @media (max-width: 1200px) {
   .wrapper .money-slider {
     width: 810px;
@@ -1678,7 +1675,6 @@ body.lock {
   }
 }
 .wrapper .money-slider .field {
-  width: 100%;
   height: 27px;
   background: #404950;
   border-radius: 2px;
@@ -1846,7 +1842,7 @@ body.lock {
 }
 .wrapper .money-slider .field .pointer {
   position: absolute;
-  width: 97.4%;
+  width: 950px;
   left: 11px;
   top: -7px;
   -webkit-appearance: none;

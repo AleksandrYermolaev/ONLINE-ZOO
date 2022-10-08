@@ -1593,6 +1593,7 @@ body.lock {
   cursor: pointer;
   transition: 0.5s ease;
   left: -7%;
+  z-index: 2;
 }
 .pets .container .arrow-left:hover {
   transform: scale(1.1);
@@ -1626,7 +1627,7 @@ body.lock {
   left: 0;
   width: 100%;
   height: 100%;
-  background: url("../../assets/icons/button-left-active.png");
+  background: url("../../assets/icons/button-left-active.png") no-repeat;
   opacity: 0;
 }
 .pets .container .arrow-left:active::after {
@@ -1638,6 +1639,7 @@ body.lock {
   cursor: pointer;
   transition: 0.5s ease;
   right: -7%;
+  z-index: 2;
 }
 .pets .container .arrow-right:hover {
   transform: scale(1.1);
@@ -1676,11 +1678,45 @@ body.lock {
   left: 0;
   width: 100%;
   height: 100%;
-  background: url("../../assets/icons/button-right-active.png");
+  background: url("../../assets/icons/button-right-active.png") no-repeat;
   opacity: 0;
 }
 .pets .container .arrow-right:active::after {
   opacity: 1;
+}
+.pets .container .carousel {
+  width: 100%;
+  margin: 0 auto;
+  overflow: hidden;
+  position: relative;
+}
+@media (max-width: 1350px) and (min-width: 1001px) {
+  .pets .container .carousel {
+    width: 945px;
+  }
+}
+@media (width: 1000px) {
+  .pets .container .carousel {
+    width: 945px;
+    margin-left: -11px;
+    padding-left: 9px;
+  }
+}
+@media (max-width: 999px) {
+  .pets .container .carousel {
+    width: 603px;
+  }
+}
+.pets .container .carousel .pets-container {
+  display: flex;
+  gap: 10px;
+  transition: 0.5s ease;
+  transform: translateX(-101%);
+}
+@media (width: 1000px) {
+  .pets .container .carousel .pets-container {
+    gap: 20px;
+  }
 }
 .pets .container .all-pets {
   display: grid;
@@ -1731,6 +1767,9 @@ body.lock {
 .pets .container .all-pets .pets__penguins {
     display: none;
   }
+}
+.pets .container .shown {
+  display: grid;
 }
 .pets .button {
   position: relative;

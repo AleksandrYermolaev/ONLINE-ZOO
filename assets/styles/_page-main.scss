@@ -353,6 +353,7 @@
 		.arrow-left {
 			@include arrow;
 			left: -7%;
+			z-index: 2;
 			@media (max-width: 1350px) {
 				left: 313px;
 			}
@@ -374,7 +375,7 @@
 				left: 0;
 				width: 100%;
 				height: 100%;
-				background: url('../../assets/icons/button-left-active.png');
+				background: url('../../assets/icons/button-left-active.png') no-repeat;
 				opacity: 0;
 			}
 			&:active {
@@ -386,6 +387,7 @@
 		.arrow-right {
 			@include arrow;
 			right: -7%;
+			z-index: 2;
 			@media (max-width: 1350px) and (min-width: 1001px) {
 				left: 67%;
 			}
@@ -410,7 +412,7 @@
 				left: 0;
 				width: 100%;
 				height: 100%;
-				background: url('../../assets/icons/button-right-active.png');
+				background: url('../../assets/icons/button-right-active.png') no-repeat;
 				opacity: 0;
 			}
 			&:active {
@@ -419,6 +421,34 @@
 				}
 			}
 		}
+		.carousel {
+			width: 100%;
+			margin: 0 auto;
+			overflow: hidden;
+			position: relative;
+			@media (max-width: 1350px) and (min-width: 1001px) {
+				width: 945px;
+			}
+			@media (width: 1000px) {
+				width: 945px;
+				margin-left: -11px;
+				padding-left: 9px;
+				
+			}
+			@media (max-width: 999px) {
+				width: 603px;
+			}
+			.pets-container {
+				display: flex;
+				gap: 10px;
+				transition: $trans-set;
+				transform: translateX(-101%);
+				@media (width: 1000px) {
+					gap: 20px;
+				}
+			}
+		}
+		
 		.all-pets {
 			display: grid;
 			grid-template: 1fr 1fr / 1fr 1fr 1fr;
@@ -452,6 +482,24 @@
 			.pets__penguins {
 				@extend %petscard;
 			}
+			// .pets__panda {
+			// 	order: 2;
+			// }
+			// .pets__eagles {
+			// 	order: 3;
+			// }
+			// .pets__gorilla {
+			// 	order: 1;
+			// }
+			// .pets__sloth {
+			// 	order: 6;
+			// }
+			// .pets__cheetas {
+			// 	order: 5;
+			// }
+			// .pets__penguins {
+			// 	order: 4;
+			// }
 			@media (max-width: 999px) and (min-width: 641px) {
 				width: 600px;
 				margin: 0 auto;
@@ -467,7 +515,9 @@
 				}
 			}
 		}
-		
+		.shown {
+			display: grid;
+		}
 	}
 	.button {
 		@include btn-orange;
